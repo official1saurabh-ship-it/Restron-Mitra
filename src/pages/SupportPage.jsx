@@ -1,0 +1,190 @@
+import React from 'react';
+import { motion } from 'framer-motion';
+import { 
+  Search, 
+  Book, 
+  MessageCircle, 
+  Mail, 
+  Phone, 
+  PlayCircle, 
+  HelpCircle, 
+  ChevronRight,
+  Zap,
+  Shield,
+  LifeBuoy
+} from 'lucide-react';
+
+const SupportPage = () => {
+  const categories = [
+    { icon: <Book className="w-6 h-6" />, title: "User Manuals", count: "12 Articles", color: "bg-blue-50 text-blue-600" },
+    { icon: <Zap className="w-6 h-6" />, title: "Getting Started", count: "5 Articles", color: "bg-orange-50 text-orange-600" },
+    { icon: <Shield className="w-6 h-6" />, title: "Security & Privacy", count: "8 Articles", color: "bg-green-50 text-green-600" },
+    { icon: <PlayCircle className="w-6 h-6" />, title: "Video Tutorials", count: "15 Videos", color: "bg-purple-50 text-purple-600" },
+  ];
+
+  const faqs = [
+    { q: "How do I set up a new branch?", a: "Go to Branch Settings > Add New Branch and follow the wizard." },
+    { q: "Can I manage inventory offline?", a: "Yes, our POS billing and core inventory tracking work offline and sync when you're back online." },
+    { q: "How do I export sales reports?", a: "Navigate to Analytics > Reports > Export. You can choose PDF or Excel formats." },
+  ];
+
+  return (
+    <div className="min-h-screen bg-white relative overflow-hidden">
+      {/* Dynamic Background Blobs */}
+      <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-purple-100/30 blur-[120px] rounded-full -z-0" />
+      <div className="absolute bottom-0 left-0 w-[600px] h-[600px] bg-indigo-100/30 blur-[150px] rounded-full -z-0" />
+
+      {/* Hero Section */}
+      <section className="relative pt-32 pb-20 px-4 sm:px-6 lg:px-8 z-10">
+        <div className="max-w-4xl mx-auto text-center space-y-8">
+          <motion.div
+            initial={{ opacity: 0, scale: 0.9 }}
+            animate={{ opacity: 1, scale: 1 }}
+            className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-purple-50 text-purple-600 text-xs font-bold uppercase tracking-widest mb-4"
+          >
+            <LifeBuoy className="w-4 h-4" />
+            <span>Support Center</span>
+          </motion.div>
+          
+          <motion.h1 
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            className="text-5xl md:text-7xl font-black text-slate-900 leading-tight"
+          >
+            How can we <span className="text-purple-600 text-transparent bg-clip-text bg-gradient-to-r from-purple-600 to-indigo-600">help you?</span>
+          </motion.h1>
+
+          <motion.div 
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.1 }}
+            className="relative max-w-2xl mx-auto group"
+          >
+            <Search className="absolute left-6 top-1/2 -translate-y-1/2 text-slate-400 group-focus-within:text-purple-600 transition-colors w-6 h-6" />
+            <input 
+              type="text" 
+              placeholder="Search for articles, guides, or tutorials..." 
+              className="w-full bg-white border-2 border-slate-100 rounded-[2rem] pl-16 pr-8 py-6 text-lg focus:outline-none focus:border-purple-600/20 focus:ring-4 focus:ring-purple-600/5 transition-all shadow-xl shadow-slate-200/20"
+            />
+          </motion.div>
+        </div>
+      </section>
+
+      {/* Category Grid */}
+      <section className="py-12 px-4 sm:px-6 lg:px-8 relative z-10">
+        <div className="max-w-7xl mx-auto">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            {categories.map((cat, i) => (
+              <motion.div
+                key={i}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: i * 0.1 }}
+                whileHover={{ y: -5 }}
+                className="p-8 rounded-[2.5rem] bg-white border border-slate-100 shadow-sm hover:shadow-2xl transition-all cursor-pointer group"
+              >
+                <div className={`w-14 h-14 rounded-2xl ${cat.color} flex items-center justify-center mb-6 group-hover:scale-110 transition-transform`}>
+                  {cat.icon}
+                </div>
+                <h3 className="text-xl font-black text-slate-900 mb-2">{cat.title}</h3>
+                <p className="text-slate-500 font-bold text-sm mb-4">{cat.count}</p>
+                <div className="flex items-center text-purple-600 font-black text-xs uppercase tracking-wider">
+                  Browse Guides <ChevronRight className="w-4 h-4 ml-1" />
+                </div>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* FAQ & Contact Section */}
+      <section className="py-24 px-4 sm:px-6 lg:px-8 relative z-10 bg-slate-50/50">
+        <div className="max-w-7xl mx-auto flex flex-col lg:flex-row gap-16">
+          {/* Left: FAQs */}
+          <div className="lg:w-7/12 space-y-8">
+            <div className="space-y-4">
+              <h2 className="text-4xl font-black text-slate-900">Common Questions</h2>
+              <p className="text-slate-500 font-medium">Quick answers to the most frequent inquiries.</p>
+            </div>
+            <div className="space-y-4">
+              {faqs.map((faq, i) => (
+                <div key={i} className="p-6 rounded-3xl bg-white border border-slate-100 shadow-sm">
+                  <h4 className="text-lg font-black text-slate-900 mb-2 flex gap-3">
+                    <HelpCircle className="w-5 h-5 text-purple-600" /> {faq.q}
+                  </h4>
+                  <p className="text-slate-600 font-medium leading-relaxed pl-8">{faq.a}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          {/* Right: Contact Card */}
+          <div className="lg:w-5/12">
+            <div className="bg-slate-900 rounded-[3rem] p-10 lg:p-12 text-white relative overflow-hidden">
+              <div className="absolute top-0 right-0 w-64 h-64 bg-purple-600/20 blur-[80px] rounded-full" />
+              
+              <div className="relative z-10 space-y-8">
+                <h3 className="text-3xl font-black leading-tight text-white">Still need help? <br /><span className="text-purple-400 text-white/60">Talk to our team.</span></h3>
+                
+                <div className="space-y-6">
+                  <div className="flex items-center gap-6 group">
+                    <div className="w-14 h-14 rounded-2xl bg-white/5 border border-white/10 flex items-center justify-center group-hover:bg-purple-600 transition-colors">
+                      <MessageCircle className="w-6 h-6 text-purple-400 group-hover:text-white" />
+                    </div>
+                    <div>
+                      <p className="text-sm text-slate-400 font-bold uppercase tracking-widest">Live Chat</p>
+                      <p className="text-lg font-black">Average wait: 2 mins</p>
+                    </div>
+                  </div>
+
+                  <div className="flex items-center gap-6 group">
+                    <div className="w-14 h-14 rounded-2xl bg-white/5 border border-white/10 flex items-center justify-center group-hover:bg-purple-600 transition-colors">
+                      <Mail className="w-6 h-6 text-purple-400 group-hover:text-white" />
+                    </div>
+                    <div>
+                      <p className="text-sm text-slate-400 font-bold uppercase tracking-widest">Email Support</p>
+                      <p className="text-lg font-black">support@biosoftech.com</p>
+                    </div>
+                  </div>
+
+                  <div className="flex items-center gap-6 group">
+                    <div className="w-14 h-14 rounded-2xl bg-white/5 border border-white/10 flex items-center justify-center group-hover:bg-purple-600 transition-colors">
+                      <Phone className="w-6 h-6 text-purple-400 group-hover:text-white" />
+                    </div>
+                    <div>
+                      <p className="text-sm text-slate-400 font-bold uppercase tracking-widest">Phone</p>
+                      <p className="text-lg font-black">+91 98765 43210</p>
+                    </div>
+                  </div>
+                </div>
+
+                <button className="w-full py-5 rounded-2xl bg-purple-600 hover:bg-purple-500 text-white font-black transition-all shadow-xl shadow-purple-600/20 hover:scale-105 active:scale-95">
+                  Start a Conversation
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Footer-like CTA */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8 text-center relative z-10">
+        <div className="max-w-3xl mx-auto space-y-8">
+          <h2 className="text-4xl font-black text-slate-900">Experience our platform in action</h2>
+          <p className="text-slate-500 font-medium text-lg">Join thousands of restaurants who have optimized their business with Restron Mitra.</p>
+          <div className="flex flex-wrap justify-center gap-4">
+            <button className="px-10 py-5 rounded-2xl bg-slate-900 text-white font-black hover:scale-105 transition-all active:scale-95 shadow-xl">
+              Get Started Free
+            </button>
+            <button className="px-10 py-5 rounded-2xl bg-white border border-slate-100 text-slate-900 font-black hover:bg-slate-50 transition-all active:scale-95 shadow-sm">
+              Schedule a Demo
+            </button>
+          </div>
+        </div>
+      </section>
+    </div>
+  );
+};
+
+export default SupportPage;

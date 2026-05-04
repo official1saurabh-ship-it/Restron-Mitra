@@ -44,7 +44,7 @@ const Table_Management = () => {
           <div className="absolute bottom-[-10%] left-[-10%] w-[40%] h-[60%] bg-indigo-600/10 blur-[120px] rounded-full" />
         </div>
 
-        <div className="min-w-7xl mx-auto px-6 relative z-10">
+        <div className="max-w-7xl mx-auto px-6 relative z-10">
           <div className="flex flex-col lg:flex-row items-center gap-16 lg:gap-24">
             <div className="lg:w-1/2 space-y-8">
               <motion.div
@@ -110,7 +110,7 @@ const Table_Management = () => {
 
       {/* 2. Benefits Section (Card Layout) */}
       <section className="py-24 bg-white relative">
-        <div className="min-w-7xl mx-auto px-6">
+        <div className="max-w-7xl mx-auto px-6">
           <div className="text-center mb-20 space-y-4">
             <h2 className="text-sm font-black text-orange-500 uppercase tracking-[0.3em]">Advantages</h2>
             <h3 className="text-4xl md:text-5xl font-black text-slate-900 leading-tight">Explore Key Benefits</h3>
@@ -143,7 +143,7 @@ const Table_Management = () => {
 
       {/* 3. Capabilities Section (Detailed Content) */}
       <section className="py-32 bg-slate-50 border-y border-slate-200">
-        <div className="min-w-7xl mx-auto px-6">
+        <div className="max-w-7xl mx-auto px-6">
           <div className="text-center mb-20 space-y-4">
             <h2 className="text-sm font-black text-orange-500 uppercase tracking-[0.3em]">Core Platform</h2>
             <h3 className="text-4xl md:text-5xl font-black text-slate-900">Powerful Capabilities</h3>
@@ -174,7 +174,7 @@ const Table_Management = () => {
 
       {/* 4. Feature Deep Dive Section */}
       <section className="py-32 bg-white overflow-hidden">
-        <div className="min-w-7xl mx-auto px-6 space-y-32">
+        <div className="max-w-7xl mx-auto px-6 space-y-32">
 
           {/* Deep Dive 1 */}
           <div className="flex flex-col lg:flex-row items-center gap-20">
@@ -254,7 +254,7 @@ const Table_Management = () => {
           <div className="absolute top-0 right-0 w-96 h-96 bg-orange-500 blur-full rounded-full -translate-y-1/2 translate-x-1/2" />
         </div>
 
-        <div className="min-w-7xl mx-auto px-6 relative z-10">
+        <div className="max-w-7xl mx-auto px-6 relative z-10">
           <div className="grid lg:grid-cols-2 gap-20 items-center">
             <div className="space-y-10">
               <div className="space-y-4">

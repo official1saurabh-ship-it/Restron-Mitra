@@ -10,28 +10,28 @@ const AnalyticsReports = () => {
     <div className="bg-white text-slate-900">
 
       {/* HERO */}
-      <section className="py-24 bg-gradient-to-br from-orange-50 to-white">
-        <div className="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-center">
+      <section className="py-12 md:py-24 bg-gradient-to-br from-orange-50 to-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 grid md:grid-cols-2 gap-12 items-center">
           <button
             onClick={() => navigate(-1)}
-            className="absolute right-6 top-12 p-3 rounded-full bg-slate-50 hover:bg-purple-600 hover:text-white text-slate-600 transition-all duration-300 shadow-sm hover:shadow-lg group z-10"
+            className="absolute right-4 sm:right-6 top-8 sm:top-12 p-3 rounded-full bg-slate-50 hover:bg-purple-600 hover:text-white text-slate-600 transition-all duration-300 shadow-sm hover:shadow-lg group z-10"
           >
             <ArrowLeft className="w-6 h-6 group-hover:-translate-x-1 transition-transform" />
           </button>
 
           <div>
-            <h1 className="text-5xl font-bold leading-tight">
+            <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold leading-tight">
               Smart <span className="text-orange-500">Analytics & Reports</span>
             </h1>
             <p className="mt-6 text-slate-500 text-lg">
               Get real-time insights into your sales, performance, and customer trends to grow your restaurant.
             </p>
 
-            <div className="mt-8 flex gap-4">
-              <button className="px-6 py-3 bg-orange-500 text-white rounded-xl">
+            <div className="mt-8 flex flex-wrap gap-4">
+              <button className="px-6 py-3 bg-orange-500 text-white rounded-xl w-full sm:w-auto">
                 View Dashboard
               </button>
-              <button className="px-6 py-3 border rounded-xl">
+              <button className="px-6 py-3 border rounded-xl w-full sm:w-auto">
                 Book Demo
               </button>
             </div>
@@ -39,17 +39,17 @@ const AnalyticsReports = () => {
 
           {/* SIMPLE ANALYTICS PREVIEW */}
           <div className="bg-white shadow-xl rounded-2xl p-6 space-y-6">
-            <div className="flex justify-between">
+            <div className="flex justify-between text-sm sm:text-base">
               <span>Total Sales</span>
               <span className="font-bold text-green-600">₹45,200</span>
             </div>
-            <div className="flex justify-between">
+            <div className="flex justify-between text-sm sm:text-base">
               <span>Orders Today</span>
               <span className="font-bold">128</span>
             </div>
-            <div className="flex justify-between">
+            <div className="flex justify-between text-sm sm:text-base">
               <span>Top Item</span>
-              <span className="font-bold">Paneer Butter Masala</span>
+              <span className="font-bold text-right ml-4">Paneer Butter Masala</span>
             </div>
 
             <div className="h-24 bg-orange-100 rounded-xl flex items-end gap-2 p-2">
@@ -67,21 +67,21 @@ const AnalyticsReports = () => {
       </section>
 
       {/* PROBLEM */}
-      <section className="py-28 bg-gradient-to-b from-white to-slate-50">
-        <div className="max-w-7xl mx-auto px-6">
+      <section className="py-16 md:py-28 bg-gradient-to-b from-white to-slate-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6">
 
           {/* Heading */}
           <div className="text-center max-w-2xl mx-auto mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold text-slate-900 leading-tight">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-slate-900 leading-tight">
               Running a Restaurant <span className="text-orange-500">Without Data</span> is Risky
             </h2>
-            <p className="text-slate-500 mt-4">
+            <p className="text-slate-500 mt-4 px-2">
               Lack of insights leads to poor decisions, wasted resources, and missed growth opportunities.
             </p>
           </div>
 
           {/* Cards */}
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8">
 
             {[
               {
@@ -136,11 +136,11 @@ const AnalyticsReports = () => {
       </section>
 
       {/* FEATURES */}
-      <section className="py-28 bg-slate-50">
-        <div className="max-w-7xl mx-auto px-6">
+      <section className="py-16 md:py-28 bg-slate-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6">
 
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold">
+            <h2 className="text-3xl sm:text-4xl font-bold">
               Powerful <span className="text-orange-500">Analytics</span> Features
             </h2>
             <p className="text-slate-500 mt-4">
@@ -148,7 +148,7 @@ const AnalyticsReports = () => {
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
             {[
               {
                 title: "Real-Time Reports",
@@ -192,12 +192,12 @@ const AnalyticsReports = () => {
       </section>
 
       {/* HOW IT WORKS */}
-      <section className="py-28 bg-white">
-        <div className="max-w-7xl mx-auto px-6">
+      <section className="py-16 md:py-28 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6">
 
           {/* Heading */}
-          <div className="text-center max-w-2xl mx-auto mb-20">
-            <h2 className="text-4xl md:text-5xl font-bold text-slate-900">
+          <div className="text-center max-w-2xl mx-auto mb-16 md:mb-20">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-slate-900">
               How It <span className="text-orange-500">Works</span>
             </h2>
             <p className="text-slate-500 mt-4">
@@ -206,7 +206,7 @@ const AnalyticsReports = () => {
           </div>
 
           {/* Steps */}
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-10 relative">
+          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-10 relative">
 
             {[
               {
@@ -264,35 +264,39 @@ const AnalyticsReports = () => {
       </section>
 
       {/* BENEFITS */}
-      <section className="py-24 bg-slate-50 text-center">
-        <h2 className="text-4xl font-bold">Grow Smarter with Data</h2>
+      <section className="py-16 md:py-24 bg-slate-50 text-center">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6">
+          <h2 className="text-3xl sm:text-4xl font-bold">Grow Smarter with Data</h2>
 
-        <div className="flex justify-center gap-12 mt-12">
-          <div>
-            <h3 className="text-3xl font-bold text-orange-500">35%</h3>
-            <p className="text-sm text-slate-500">Better Decisions</p>
-          </div>
+          <div className="flex flex-col sm:flex-row justify-center items-center gap-10 sm:gap-12 mt-12">
+            <div>
+              <h3 className="text-3xl sm:text-4xl font-bold text-orange-500">35%</h3>
+              <p className="text-sm text-slate-500">Better Decisions</p>
+            </div>
 
-          <div>
-            <h3 className="text-3xl font-bold text-orange-500">50%</h3>
-            <p className="text-sm text-slate-500">Faster Insights</p>
-          </div>
+            <div>
+              <h3 className="text-3xl sm:text-4xl font-bold text-orange-500">50%</h3>
+              <p className="text-sm text-slate-500">Faster Insights</p>
+            </div>
 
-          <div>
-            <h3 className="text-3xl font-bold text-orange-500">100%</h3>
-            <p className="text-sm text-slate-500">Real-Time Data</p>
+            <div>
+              <h3 className="text-3xl sm:text-4xl font-bold text-orange-500">100%</h3>
+              <p className="text-sm text-slate-500">Real-Time Data</p>
+            </div>
           </div>
         </div>
       </section>
 
       {/* CTA */}
-      <section className="py-24 text-center bg-orange-500 text-white">
-        <h2 className="text-4xl font-bold">
-          Make Data-Driven Decisions Today
-        </h2>
-        <button className="mt-6 px-6 py-3 bg-white text-orange-500 rounded-xl">
-          Get Started
-        </button>
+      <section className="py-16 md:py-24 text-center bg-orange-500 text-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6">
+          <h2 className="text-3xl sm:text-4xl font-bold">
+            Make Data-Driven Decisions Today
+          </h2>
+          <button className="mt-8 px-8 py-4 bg-white text-orange-500 rounded-xl font-bold hover:bg-orange-50 transition-colors shadow-lg">
+            Get Started
+          </button>
+        </div>
       </section>
 
     </div>

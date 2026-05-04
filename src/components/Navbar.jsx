@@ -9,16 +9,16 @@ import {
   X
 } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
-
+import Restron from '../assets/Restron.png';
 const Navbar = () => {
   const [mobileOpen, setMobileOpen] = useState(false);
+  const [isMounted, setIsMounted] = useState(false);
   const location = useLocation();
 
   const navItems = [
     { name: 'Home', path: '/', icon: Home },
-
-    { name: 'Pricing', path: '#pricing', icon: CreditCard },
-    { name: 'Support', path: '#support', icon: LifeBuoy },
+    { name: 'Pricing', path: '/pricing', icon: CreditCard },
+    { name: 'Support', path: '/support', icon: LifeBuoy },
   ];
 
   // Helper function to determine if a link is active
@@ -29,14 +29,19 @@ const Navbar = () => {
     return location.pathname === itemPath;
   };
 
+  // Ensure component is mounted before checking location
+  useEffect(() => {
+    setIsMounted(true);
+  }, []);
+
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 bg-white/80 backdrop-blur-xl border-b border-saas-border">
+    <nav className="fixed top-0 left-0 right-0 z-50 bg-white/80 backdrop-blur-xl border-b border-gray-200">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-20">
           {/* Logo Section */}
-          <div className="flex-shrink-0 flex items-center">
-            <Link to="/" className="flex items-center gap-2 font-black text-2xl tracking-tight text-saas-accent">
-              Restron <span className="text-gray-900 font-bold">Mitra</span>
+          <div className="h-full flex items-center">
+            <Link to="/" >
+              <img src={Restron} alt="" className='h-16 w-auto object-contain' />
             </Link>
           </div>
 
@@ -48,14 +53,18 @@ const Navbar = () => {
                 <Link
                   key={item.name}
                   to={item.path}
-                  className={`relative px-6 py-2 rounded-xl text-sm font-bold transition-all duration-300 ${isActive ? 'text-white' : 'text-gray-500 hover:text-gray-900'
+                  className={`relative px-4 lg:px-6 py-2 rounded-xl text-sm font-bold transition-colors duration-300 ${isActive
+                    ? 'text-white'
+                    : 'text-gray-700 hover:text-gray-900 hover:bg-gray-200/50'
                     }`}
                 >
+                  {/* Active pill indicator */}
                   {isActive && (
                     <motion.div
                       layoutId="active-pill"
-                      className="absolute inset-0 bg-saas-accent rounded-xl shadow-lg shadow-saas-accent/20"
-                      transition={{ type: "spring", stiffness: 400, damping: 30 }}
+                      className="absolute inset-0 rounded-xl bg-saas-accent shadow-lg shadow-saas-accent/20"
+                      initial={false}
+                      transition={{ type: "spring", stiffness: 300, damping: 25 }}
                     />
                   )}
                   <span className="relative z-10">{item.name}</span>
@@ -65,12 +74,14 @@ const Navbar = () => {
           </div>
 
           {/* Desktop Actions */}
-          <div className="hidden md:flex items-center gap-4">
-            <button className="text-gray-500 hover:text-gray-900 font-bold text-sm px-4 py-2 transition-colors active:scale-95">
-              Login
+          <div className="hidden md:flex items-center gap-2 lg:gap-4">
+            <button className="text-gray-500 hover:text-gray-900 font-bold text-sm px-3 lg:px-4 py-2 transition-colors active:scale-95">
+              <a href="https://restaurants.biosoftech.in/login" > Login</a>
             </button>
-            <button className="bg-saas-accent hover:bg-saas-accent/90 text-white px-6 py-2.5 rounded-xl font-bold text-sm shadow-lg shadow-saas-accent/20 transition-all hover:scale-105 active:scale-95">
-              Register
+            <button className="bg-saas-accent hover:bg-saas-accent/90 text-white px-4 lg:px-6 py-2.5 rounded-xl font-bold text-sm shadow-lg shadow-saas-accent/20 transition-all hover:scale-105 active:scale-95">
+              <button className="text-white hover:text-gray-900 font-bold text-sm px-3 lg:px-4 py-2 transition-colors active:scale-95">
+                <a href="https://restaurants.biosoftech.in/register" > Register</a>
+              </button>
             </button>
           </div>
 
@@ -80,7 +91,7 @@ const Navbar = () => {
               onClick={() => setMobileOpen(!mobileOpen)}
               className="p-2 text-gray-500 hover:text-saas-accent transition-colors active:scale-90"
             >
-              {mobileOpen ? <X /> : <Menu />}
+              {mobileOpen ? <X size={24} /> : <Menu size={24} />}
             </button>
           </div>
         </div>

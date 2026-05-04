@@ -43,12 +43,12 @@ const Pos_Billing = () => {
             <span className="font-bold text-sm uppercase tracking-widest">Back to Home</span>
           </button>
 
-          <div className="flex flex-col lg:flex-row items-center gap-16">
-            <div className="lg:w-1/2 space-y-8">
+          <div className="flex flex-col lg:flex-row items-center gap-12 lg:gap-16">
+            <div className="lg:w-1/2 space-y-6 md:space-y-8 text-center lg:text-left">
               <motion.div
                 initial={{ opacity: 0, x: -20 }}
                 animate={{ opacity: 1, x: 0 }}
-                className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-orange-500/10 border border-orange-500/20 text-orange-500 text-xs font-bold tracking-widest uppercase"
+                className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-orange-500/10 border border-orange-500/20 text-orange-500 text-[10px] md:text-xs font-bold tracking-widest uppercase"
               >
                 <Zap className="w-4 h-4 fill-orange-500" />
                 <span>Lightning Fast Checkout</span>
@@ -57,7 +57,7 @@ const Pos_Billing = () => {
               <motion.h1
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
-                className="text-5xl lg:text-7xl font-black text-white leading-[1.1]"
+                className="text-4xl md:text-5xl lg:text-7xl font-black text-white leading-tight"
               >
                 Fast & Error-Free <br />
                 <span className="text-orange-500">POS Billing</span>
@@ -67,7 +67,7 @@ const Pos_Billing = () => {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.1 }}
-                className="text-xl text-slate-400 max-w-xl leading-relaxed font-medium"
+                className="text-lg md:text-xl text-slate-400 max-w-xl mx-auto lg:mx-0 leading-relaxed font-medium"
               >
                 The ultimate restaurant checkout experience. Speed through orders, manage complex bills, and print receipts in milliseconds—even when offline.
               </motion.p>
@@ -76,12 +76,12 @@ const Pos_Billing = () => {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.2 }}
-                className="flex flex-wrap gap-4"
+                className="flex flex-wrap justify-center lg:justify-start gap-4"
               >
-                <button className="px-8 py-4 bg-orange-500 hover:bg-orange-400 text-white font-black rounded-2xl shadow-xl shadow-orange-500/20 transition-all hover:scale-105 active:scale-95">
+                <button className="px-6 md:px-8 py-3 md:py-4 bg-orange-500 hover:bg-orange-400 text-white font-black rounded-2xl shadow-xl shadow-orange-500/20 transition-all hover:scale-105 active:scale-95 text-sm md:text-base">
                   Get Started Free
                 </button>
-                <button className="px-8 py-4 bg-white/5 hover:bg-white/10 text-white border border-white/10 font-black rounded-2xl backdrop-blur-md transition-all">
+                <button className="px-6 md:px-8 py-3 md:py-4 bg-white/5 hover:bg-white/10 text-white border border-white/10 font-black rounded-2xl backdrop-blur-md transition-all text-sm md:text-base">
                   Book a Demo
                 </button>
               </motion.div>
@@ -91,17 +91,15 @@ const Pos_Billing = () => {
               initial={{ opacity: 0, scale: 0.9, rotateY: -10 }}
               animate={{ opacity: 1, scale: 1, rotateY: 0 }}
               transition={{ duration: 0.8 }}
-              className="lg:w-1/2 relative"
+              className="lg:w-1/2 relative w-full max-w-2xl mx-auto"
             >
-              <div className="relative z-10 p-4 bg-gradient-to-br from-white/10 to-white/5 rounded-[2.5rem] border border-white/10 backdrop-blur-sm shadow-2xl">
+              <div className="relative z-10 p-2 md:p-4 bg-gradient-to-br from-white/10 to-white/5 rounded-[1.5rem] md:rounded-[2.5rem] border border-white/10 backdrop-blur-sm shadow-2xl">
                 <img
                   src={laptopMobile}
                   alt="POS Mockup"
-                  className="rounded-2xl w-full h-auto"
+                  className="rounded-xl md:rounded-2xl w-full h-auto"
                 />
               </div>
-              {/* Floating Badge */}
-
             </motion.div>
           </div>
         </div>
@@ -135,7 +133,7 @@ const Pos_Billing = () => {
 
       {/* Solution Section */}
       <section className="py-24 bg-slate-50 border-y border-slate-100 overflow-hidden">
-        <div className="min-w-7xl mx-auto px-6 text-center">
+        <div className="max-w-7xl mx-auto px-6 text-center">
           <div className="space-y-8">
             <h2 className="text-sm font-black text-orange-500 uppercase tracking-[0.3em]">The Solution</h2>
             <h3 className="text-3xl md:text-5xl font-black text-slate-900 leading-tight">One Smart Interface for <br />Every Transaction</h3>

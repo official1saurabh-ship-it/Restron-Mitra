@@ -20,8 +20,7 @@ import {
   Star
 } from 'lucide-react';
 import laptopMobile from "../assets/laptop-mobile.png";
-import bag from "../assets/bag.png";
-import food from "../assets/food.jpg";
+import laptopbagplate from "../assets/laptop-bag-plate.png";
 
 const Online_Ordering = () => {
   const navigate = useNavigate();
@@ -45,12 +44,12 @@ const Online_Ordering = () => {
             <span className="font-bold text-sm uppercase tracking-widest">Back to Home</span>
           </button>
 
-          <div className="flex flex-col lg:flex-row items-center gap-16">
-            <div className="lg:w-[40%] space-y-8">
+          <div className="flex flex-col lg:flex-row items-center gap-12 lg:gap-16">
+            <div className="lg:w-[45%] space-y-6 md:space-y-8 text-center lg:text-left">
               <motion.div
                 initial={{ opacity: 0, x: -20 }}
                 animate={{ opacity: 1, x: 0 }}
-                className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-orange-500/10 border border-orange-500/20 text-orange-500 text-xs font-bold tracking-widest uppercase"
+                className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-orange-500/10 border border-orange-500/20 text-orange-500 text-[10px] md:text-xs font-bold tracking-widest uppercase"
               >
                 <Globe className="w-4 h-4" />
                 <span>Zero Commission Ordering</span>
@@ -59,7 +58,7 @@ const Online_Ordering = () => {
               <motion.h1
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
-                className="text-5xl lg:text-7xl font-black text-white leading-[1.1]"
+                className="text-4xl md:text-5xl lg:text-7xl font-black text-white leading-tight"
               >
                 Accept Orders Directly, <br />
                 <span className="text-orange-500">Without Commissions</span>
@@ -69,7 +68,7 @@ const Online_Ordering = () => {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.1 }}
-                className="text-xl text-slate-400 max-w-xl leading-relaxed font-medium"
+                className="text-lg md:text-xl text-slate-400 max-w-xl mx-auto lg:mx-0 leading-relaxed font-medium"
               >
                 Stop losing 30% of your revenue to third-party apps. Launch your own branded ordering website and keep 100% of your profits and customer data.
               </motion.p>
@@ -78,12 +77,12 @@ const Online_Ordering = () => {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.2 }}
-                className="flex flex-wrap gap-4"
+                className="flex flex-wrap justify-center lg:justify-start gap-4"
               >
-                <button className="px-8 py-4 bg-orange-500 hover:bg-orange-400 text-white font-black rounded-2xl shadow-xl shadow-orange-500/20 transition-all hover:scale-105 active:scale-95">
+                <button className="px-6 md:px-8 py-3 md:py-4 bg-orange-500 hover:bg-orange-400 text-white font-black rounded-2xl shadow-xl shadow-orange-500/20 transition-all hover:scale-105 active:scale-95 text-sm md:text-base">
                   Start Accepting Orders
                 </button>
-                <button className="px-8 py-4 bg-white/5 hover:bg-white/10 text-white border border-white/10 font-black rounded-2xl backdrop-blur-md transition-all">
+                <button className="px-6 md:px-8 py-3 md:py-4 bg-white/5 hover:bg-white/10 text-white border border-white/10 font-black rounded-2xl backdrop-blur-md transition-all text-sm md:text-base">
                   Book a Demo
                 </button>
               </motion.div>
@@ -92,35 +91,10 @@ const Online_Ordering = () => {
               initial={{ opacity: 0, scale: 0.9, x: 20 }}
               animate={{ opacity: 1, scale: 1, x: 0 }}
               transition={{ duration: 0.8 }}
-              className="lg:w-[60%] relative flex items-center justify-center"
+              className="lg:w-[55%] relative flex items-center justify-center w-full max-w-2xl mx-auto mt-12 lg:mt-0"
             >
-              <div className="relative z-10 w-full scale-110 lg:scale-125 transition-transform duration-500">
-                <img
-                  src={laptopMobile}
-                  alt="Online Ordering Mockup"
-                  className="w-full h-auto drop-shadow-[0_20px_50px_rgba(0,0,0,0.6)] rounded-[2rem] lg:rounded-[3rem]"
-                />
-                
-                {/* Food Image - Enlarged */}
-                <img
-                  src={food}
-                  alt="Delicious Food"
-                  className="absolute -bottom-16 -left-16 w-48 lg:w-80 h-auto z-30 opacity-100 rounded-full shadow-[0_30px_60px_rgba(0,0,0,0.7)] border-[12px] border-white/10 hover:scale-105 transition-transform duration-500"
-                />
-
-                {/* Bag Image - Positioned to the side and enlarged */}
-                <div className="absolute -top-12 -right-12 lg:-right-24 w-56 lg:w-96 h-auto z-20 opacity-100 drop-shadow-[0_30px_60px_rgba(0,0,0,0.6)] group/bag hover:scale-105 transition-transform duration-500">
-                  <img
-                    src={bag}
-                    alt="Order Bag"
-                    className="w-full h-auto"
-                  />
-                  <div className="absolute inset-0 flex items-center justify-center">
-                    <span className="text-2xl lg:text-5xl font-black text-slate-900/40 uppercase tracking-tighter -rotate-12 select-none">
-                      Restron Mitra
-                    </span>
-                  </div>
-                </div>
+              <div className="relative z-10 w-full lg:scale-110 transition-transform duration-500">
+                <img src={laptopbagplate} alt="" />
               </div>
             </motion.div>
           </div>

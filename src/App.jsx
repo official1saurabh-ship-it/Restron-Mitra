@@ -15,13 +15,21 @@ import BranchWiseDetails from './Features/BranchWiseDetails';
 import RoleBasedPermission from './Features/RoleBasedPermission';
 import AnalyticsReports from './Features/AnalyticsReport';
 
+import ScrollToTop from './components/ScrollToTop';
+
+import Pricing from './pages/Pricing';
+import SupportPage from './pages/SupportPage';
+
 function App() {
   return (
 
     <div className="App">
+      <ScrollToTop />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/features" element={<FeaturesPage />} />
+        <Route path="/pricing" element={<Pricing />} />
+        <Route path="/support" element={<SupportPage />} />
         <Route path="/technical-guide/:category" element={<TechnicalGuide />} />
 
         {/* Feature Routes */}

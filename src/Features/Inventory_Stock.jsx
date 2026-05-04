@@ -5,22 +5,22 @@ const InventoryStock = () => {
     <div className="bg-white text-slate-900">
 
       {/* HERO */}
-      <section className="py-24 bg-gradient-to-br from-orange-50 to-white">
-        <div className="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-center">
+      <section className="py-12 md:py-24 bg-gradient-to-br from-orange-50 to-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 grid md:grid-cols-2 gap-12 items-center">
 
           <div>
-            <h1 className="text-5xl font-bold leading-tight">
+            <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold leading-tight">
               Smart <span className="text-orange-500">Inventory & Stock</span> Management
             </h1>
             <p className="mt-6 text-slate-500 text-lg">
               Track ingredients, avoid shortages, and manage your kitchen inventory in real time.
             </p>
 
-            <div className="mt-8 flex gap-4">
-              <button className="px-6 py-3 bg-orange-500 text-white rounded-xl">
+            <div className="mt-8 flex flex-col sm:flex-row gap-4">
+              <button className="px-6 py-3 bg-orange-500 text-white rounded-xl w-full sm:w-auto">
                 Start Free Trial
               </button>
-              <button className="px-6 py-3 border rounded-xl">
+              <button className="px-6 py-3 border rounded-xl w-full sm:w-auto">
                 Book Demo
               </button>
             </div>
@@ -34,7 +34,7 @@ const InventoryStock = () => {
               { name: "Oil", qty: "5L", status: "ok" },
               { name: "Paneer", qty: "1kg", status: "low" },
             ].map((item, i) => (
-              <div key={i} className="flex justify-between items-center">
+              <div key={i} className="flex justify-between items-center text-sm sm:text-base">
                 <span>{item.name}</span>
                 <span className="text-sm">{item.qty}</span>
                 <span
@@ -53,39 +53,41 @@ const InventoryStock = () => {
       </section>
 
       {/* PROBLEM */}
-      <section className="py-20 bg-white text-center">
-        <h2 className="text-4xl font-bold">Running Out of Ingredients Should Never Be a Surprise</h2>
+      <section className="py-16 md:py-20 bg-white text-center">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold">Running Out of Ingredients Should Never Be a Surprise</h2>
 
-        <div className="grid md:grid-cols-4 gap-8 mt-12 max-w-6xl mx-auto px-6">
-          {[
-            "Stock runs out unexpectedly",
-            "Manual tracking errors",
-            "Food wastage",
-            "No visibility of inventory",
-          ].map((item, i) => (
-            <div key={i} className="p-6 bg-slate-50 rounded-xl">
-              {item}
-            </div>
-          ))}
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8 mt-12 max-w-6xl mx-auto">
+            {[
+              "Stock runs out unexpectedly",
+              "Manual tracking errors",
+              "Food wastage",
+              "No visibility of inventory",
+            ].map((item, i) => (
+              <div key={i} className="p-6 bg-slate-50 rounded-xl hover:bg-orange-50 transition-colors">
+                {item}
+              </div>
+            ))}
+          </div>
         </div>
       </section>
 
       {/* FEATURES */}
-      <section className="py-28 bg-slate-50">
-  <div className="max-w-7xl mx-auto px-6">
+      <section className="py-16 md:py-28 bg-slate-50">
+  <div className="max-w-7xl mx-auto px-4 sm:px-6">
 
     {/* Heading */}
     <div className="text-center mb-16">
-      <h2 className="text-4xl md:text-5xl font-bold text-slate-900">
+      <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-slate-900">
         Powerful <span className="text-orange-500">Inventory Features</span>
       </h2>
-      <p className="text-slate-500 mt-4 max-w-2xl mx-auto">
+      <p className="text-slate-500 mt-4 max-w-2xl mx-auto px-2">
         Everything you need to manage stock efficiently and avoid shortages.
       </p>
     </div>
 
     {/* Cards */}
-    <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+    <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
 
       {[
         {
@@ -132,7 +134,7 @@ const InventoryStock = () => {
           </h3>
 
           {/* Description */}
-          <p className="text-slate-500 leading-relaxed">
+          <p className="text-slate-500 leading-relaxed text-sm sm:text-base">
             {item.desc}
           </p>
 
@@ -153,51 +155,57 @@ const InventoryStock = () => {
 </section>
 
       {/* HOW IT WORKS */}
-      <section className="py-24 text-center">
-        <h2 className="text-4xl font-bold">How It Works</h2>
+      <section className="py-16 md:py-24 text-center">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6">
+          <h2 className="text-3xl sm:text-4xl font-bold">How It Works</h2>
 
-        <div className="flex flex-col md:flex-row justify-center gap-8 mt-12">
-          {[
-            "Order Placed",
-            "Ingredients Used",
-            "Stock Updated",
-            "Alerts Generated",
-          ].map((step, i) => (
-            <div key={i} className="p-6 bg-white shadow rounded-xl">
-              {step}
-            </div>
-          ))}
+          <div className="flex flex-col md:flex-row justify-center items-center gap-6 md:gap-8 mt-12">
+            {[
+              "Order Placed",
+              "Ingredients Used",
+              "Stock Updated",
+              "Alerts Generated",
+            ].map((step, i) => (
+              <div key={i} className="p-6 bg-white shadow-lg rounded-xl w-full max-w-[250px]">
+                {step}
+              </div>
+            ))}
+          </div>
         </div>
       </section>
 
       {/* BENEFITS */}
-      <section className="py-24 bg-slate-50 text-center">
-        <h2 className="text-4xl font-bold">Why Restaurants Love It</h2>
+      <section className="py-16 md:py-24 bg-slate-50 text-center">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6">
+          <h2 className="text-3xl sm:text-4xl font-bold">Why Restaurants Love It</h2>
 
-        <div className="flex justify-center gap-12 mt-12">
-          <div>
-            <h3 className="text-3xl font-bold text-orange-500">40%</h3>
-            <p className="text-sm text-slate-500">Less Wastage</p>
-          </div>
+          <div className="flex flex-col sm:flex-row justify-center items-center gap-10 sm:gap-12 mt-12">
+            <div>
+              <h3 className="text-3xl sm:text-4xl font-bold text-orange-500">40%</h3>
+              <p className="text-sm text-slate-500">Less Wastage</p>
+            </div>
 
-          <div>
-            <h3 className="text-3xl font-bold text-orange-500">25%</h3>
-            <p className="text-sm text-slate-500">Better Control</p>
-          </div>
+            <div>
+              <h3 className="text-3xl sm:text-4xl font-bold text-orange-500">25%</h3>
+              <p className="text-sm text-slate-500">Better Control</p>
+            </div>
 
-          <div>
-            <h3 className="text-3xl font-bold text-orange-500">100%</h3>
-            <p className="text-sm text-slate-500">Real-Time Tracking</p>
+            <div>
+              <h3 className="text-3xl sm:text-4xl font-bold text-orange-500">100%</h3>
+              <p className="text-sm text-slate-500">Real-Time Tracking</p>
+            </div>
           </div>
         </div>
       </section>
 
       {/* CTA */}
-      <section className="py-24 text-center bg-orange-500 text-white">
-        <h2 className="text-4xl font-bold">Never Run Out of Ingredients Again</h2>
-        <button className="mt-6 px-6 py-3 bg-white text-orange-500 rounded-xl">
-          Get Started
-        </button>
+      <section className="py-16 md:py-24 text-center bg-orange-500 text-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold">Never Run Out of Ingredients Again</h2>
+          <button className="mt-8 px-8 py-4 bg-white text-orange-500 rounded-xl font-bold hover:bg-orange-50 transition-colors shadow-lg">
+            Get Started
+          </button>
+        </div>
       </section>
 
     </div>
