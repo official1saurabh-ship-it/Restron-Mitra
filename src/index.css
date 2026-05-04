@@ -9,7 +9,16 @@
   --color-saas-bg: #FFFFFF;
   --color-saas-card: #F9FAFB;
   --color-saas-border: #E5E7EB;
-  --color-saas-accent: #7C3AED;
+  --color-saas-accent: #FF5A36;
+
+  /* Brand Colors */
+  --color-brand-50: #FFF5F2;
+  --color-brand-100: #FFEAE5;
+  --color-brand-200: #FFD1C7;
+  --color-brand-500: #FF7849;
+  --color-brand-600: #FF5A36;
+  --color-brand-700: #F4511E;
+  --color-brand-800: #E64A19;
 }
 
 @layer base {

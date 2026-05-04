@@ -15,7 +15,7 @@ const FeaturesHero = () => {
         >
           <h1 className="text-5xl lg:text-7xl font-extrabold tracking-tight mb-6 text-white leading-tight">
             All-in-One Restaurant <br />
-            <span className="bg-gradient-to-r from-saas-accent to-purple-400 bg-clip-text text-transparent">
+            <span className="bg-gradient-to-r from-saas-accent to-brand-500 bg-clip-text text-transparent">
               Management Platform
             </span>
           </h1>

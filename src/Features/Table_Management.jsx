@@ -40,8 +40,8 @@ const Table_Management = () => {
       {/* 1. Hero Section */}
       <section className="relative pt-32 pb-20 lg:pt-48 lg:pb-40 bg-slate-950 overflow-hidden">
         <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full h-full overflow-hidden pointer-events-none">
-          <div className="absolute top-[-20%] right-[-10%] w-[50%] h-[70%] bg-orange-600/15 blur-[140px] rounded-full" />
-          <div className="absolute bottom-[-10%] left-[-10%] w-[40%] h-[60%] bg-indigo-600/10 blur-[120px] rounded-full" />
+          <div className="absolute top-[-20%] right-[-10%] w-[50%] h-[70%] bg-brand-700/15 blur-[140px] rounded-full" />
+          <div className="absolute bottom-[-10%] left-[-10%] w-[40%] h-[60%] bg-brand-600/10 blur-[120px] rounded-full" />
         </div>
 
         <div className="max-w-7xl mx-auto px-6 relative z-10">
@@ -50,7 +50,7 @@ const Table_Management = () => {
               <motion.div
                 initial={{ opacity: 0, y: 10 }}
                 animate={{ opacity: 1, y: 0 }}
-                className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/5 border border-white/10 text-orange-500 text-xs font-bold tracking-widest uppercase"
+                className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/5 border border-white/10 text-brand-600 text-xs font-bold tracking-widest uppercase"
               >
                 <TableIcon className="w-4 h-4" />
                 <span>Premium Table Management</span>
@@ -62,7 +62,7 @@ const Table_Management = () => {
                 className="text-5xl lg:text-7xl font-black text-white leading-[1.1] tracking-tight"
               >
                 Smart Table <br />
-                <span className="text-orange-500">Management</span> <br />
+                <span className="text-brand-600">Management</span> <br />
                 for Modern Restaurants
               </motion.h1>
 
@@ -81,7 +81,7 @@ const Table_Management = () => {
                 transition={{ delay: 0.2 }}
                 className="flex flex-wrap gap-5"
               >
-                <button className="px-10 py-5 bg-orange-500 hover:bg-orange-400 text-white font-black rounded-2xl shadow-2xl shadow-orange-500/30 transition-all hover:scale-105 active:scale-95 flex items-center gap-2">
+                <button className="px-10 py-5 bg-brand-600 hover:bg-brand-500 text-white font-black rounded-2xl shadow-2xl shadow-brand-600/30 transition-all hover:scale-105 active:scale-95 flex items-center gap-2">
                   Get Started <ChevronRight className="w-5 h-5" />
                 </button>
                 <button className="px-10 py-5 bg-white/5 hover:bg-white/10 text-white border border-white/10 font-black rounded-2xl backdrop-blur-md transition-all">
@@ -112,7 +112,7 @@ const Table_Management = () => {
       <section className="py-24 bg-white relative">
         <div className="max-w-7xl mx-auto px-6">
           <div className="text-center mb-20 space-y-4">
-            <h2 className="text-sm font-black text-orange-500 uppercase tracking-[0.3em]">Advantages</h2>
+            <h2 className="text-sm font-black text-brand-600 uppercase tracking-[0.3em]">Advantages</h2>
             <h3 className="text-4xl md:text-5xl font-black text-slate-900 leading-tight">Explore Key Benefits</h3>
           </div>
 
@@ -128,10 +128,10 @@ const Table_Management = () => {
               <motion.div
                 key={i}
                 whileHover={{ y: -5 }}
-                className="p-10 rounded-[2.5rem] bg-slate-50 border border-slate-100 transition-all duration-300 group hover:bg-white hover:shadow-2xl hover:shadow-orange-500/10"
+                className="p-10 rounded-[2.5rem] bg-slate-50 border border-slate-100 transition-all duration-300 group hover:bg-white hover:shadow-2xl hover:shadow-brand-600/10"
               >
-                <div className="w-14 h-14 bg-white rounded-2xl flex items-center justify-center mb-8 shadow-sm group-hover:bg-orange-500 group-hover:text-white transition-all duration-300">
-                  <benefit.icon className="w-7 h-7 text-orange-600 group-hover:text-white" />
+                <div className="w-14 h-14 bg-white rounded-2xl flex items-center justify-center mb-8 shadow-sm group-hover:bg-brand-600 group-hover:text-white transition-all duration-300">
+                  <benefit.icon className="w-7 h-7 text-brand-700 group-hover:text-white" />
                 </div>
                 <h4 className="text-2xl font-black text-slate-900 mb-4">{benefit.title}</h4>
                 <p className="text-slate-500 font-medium leading-relaxed">{benefit.desc}</p>
@@ -145,7 +145,7 @@ const Table_Management = () => {
       <section className="py-32 bg-slate-50 border-y border-slate-200">
         <div className="max-w-7xl mx-auto px-6">
           <div className="text-center mb-20 space-y-4">
-            <h2 className="text-sm font-black text-orange-500 uppercase tracking-[0.3em]">Core Platform</h2>
+            <h2 className="text-sm font-black text-brand-600 uppercase tracking-[0.3em]">Core Platform</h2>
             <h3 className="text-4xl md:text-5xl font-black text-slate-900">Powerful Capabilities</h3>
           </div>
 
@@ -159,7 +159,7 @@ const Table_Management = () => {
               { icon: Smartphone, title: "Mobile Optimized", desc: "Control your floor from anywhere. Fully responsive dashboard accessible on tablets and mobile devices for staff-on-the-go." }
             ].map((cap, i) => (
               <div key={i} className="flex gap-8 group">
-                <div className="shrink-0 w-16 h-16 bg-white rounded-[1.25rem] border border-slate-200 flex items-center justify-center text-orange-600 shadow-sm group-hover:border-orange-200 transition-colors">
+                <div className="shrink-0 w-16 h-16 bg-white rounded-[1.25rem] border border-slate-200 flex items-center justify-center text-brand-700 shadow-sm group-hover:border-brand-200 transition-colors">
                   <cap.icon className="w-8 h-8" />
                 </div>
                 <div className="space-y-3">
@@ -186,7 +186,7 @@ const Table_Management = () => {
               <ul className="space-y-4">
                 {['Custom table shapes and sizes', 'Multi-floor and patio support', 'One-tap table merging'].map((item, idx) => (
                   <li key={idx} className="flex items-center gap-3 font-bold text-slate-700">
-                    <div className="w-6 h-6 rounded-full bg-orange-100 flex items-center justify-center text-orange-600">
+                    <div className="w-6 h-6 rounded-full bg-brand-100 flex items-center justify-center text-brand-700">
                       <CheckCircle2 className="w-4 h-4" />
                     </div>
                     {item}
@@ -195,7 +195,7 @@ const Table_Management = () => {
               </ul>
             </div>
             <div className="lg:w-1/2 relative group">
-              <div className="absolute -inset-4 bg-orange-500/5 rounded-[3rem] blur-2xl group-hover:bg-orange-500/10 transition-all" />
+              <div className="absolute -inset-4 bg-brand-600/5 rounded-[3rem] blur-2xl group-hover:bg-brand-600/10 transition-all" />
               <div className="relative p-6 bg-slate-50 rounded-[2.5rem] border border-slate-100 shadow-xl">
                 <img src={tablesImg} alt="Floor Plan Architect" className="w-full h-auto rounded-2xl shadow-sm" />
               </div>
@@ -212,20 +212,20 @@ const Table_Management = () => {
               <div className="p-8 bg-slate-900 rounded-[2rem] border border-white/10 space-y-6">
                 <div className="flex justify-between items-center text-white">
                   <span className="font-bold">Average Wait Time</span>
-                  <span className="text-orange-500 font-black text-2xl">12 Mins</span>
+                  <span className="text-brand-600 font-black text-2xl">12 Mins</span>
                 </div>
                 <div className="w-full bg-white/10 h-2 rounded-full overflow-hidden">
                   <motion.div
                     initial={{ width: 0 }}
                     whileInView={{ width: '65%' }}
-                    className="h-full bg-orange-500"
+                    className="h-full bg-brand-600"
                   />
                 </div>
                 <p className="text-slate-400 text-sm font-medium">Waitlist performance improved by 22% this week.</p>
               </div>
             </div>
             <div className="lg:w-1/2 relative">
-              <div className="p-10 bg-orange-500 rounded-[3rem] shadow-2xl relative overflow-hidden">
+              <div className="p-10 bg-brand-600 rounded-[3rem] shadow-2xl relative overflow-hidden">
                 <div className="absolute top-0 right-0 w-64 h-64 bg-white/10 blur-3xl rounded-full translate-x-1/2 -translate-y-1/2" />
                 <div className="relative z-10 space-y-4">
                   {[...Array(3)].map((_, i) => (
@@ -251,7 +251,7 @@ const Table_Management = () => {
       {/* 5. Mini Dashboard Preview Section */}
       <section className="py-24 bg-slate-950 relative overflow-hidden">
         <div className="absolute inset-0 opacity-10 pointer-events-none">
-          <div className="absolute top-0 right-0 w-96 h-96 bg-orange-500 blur-full rounded-full -translate-y-1/2 translate-x-1/2" />
+          <div className="absolute top-0 right-0 w-96 h-96 bg-brand-600 blur-full rounded-full -translate-y-1/2 translate-x-1/2" />
         </div>
 
         <div className="max-w-7xl mx-auto px-6 relative z-10">
@@ -267,7 +267,7 @@ const Table_Management = () => {
               <div className="grid grid-cols-3 gap-6">
                 {[
                   { label: "Total Tables", val: "48", icon: TableIcon, color: "text-white" },
-                  { label: "Occupied", val: "32", icon: Users, color: "text-orange-500" },
+                  { label: "Occupied", val: "32", icon: Users, color: "text-brand-600" },
                   { label: "Available", val: "16", icon: CheckCircle2, color: "text-green-500" }
                 ].map((stat, i) => (
                   <div key={i} className="bg-white/5 border border-white/10 p-6 rounded-3xl backdrop-blur-sm">
@@ -287,9 +287,9 @@ const Table_Management = () => {
                   { id: '9', s: 'o' }, { id: '10', s: 'o' }, { id: '11', s: 'o' }, { id: '12', s: 'r' },
                   { id: '13', s: 'a' }, { id: '14', s: 'o' }, { id: '15', s: 'a' }, { id: '16', s: 'a' }
                 ].map((t) => (
-                  <div key={t.id} className={`aspect-square rounded-xl flex flex-col items-center justify-center gap-1 border transition-all ${t.s === 'o' ? 'bg-orange-500/20 border-orange-500/40 text-orange-500' :
+                  <div key={t.id} className={`aspect-square rounded-xl flex flex-col items-center justify-center gap-1 border transition-all ${t.s === 'o' ? 'bg-brand-600/20 border-brand-600/40 text-brand-600' :
                     t.s === 'a' ? 'bg-green-500/20 border-green-500/40 text-green-500' :
-                      'bg-blue-500/20 border-blue-500/40 text-blue-500'
+                      'bg-brand-500/20 border-brand-500/40 text-brand-500'
                     }`}>
                     <span className="text-[10px] font-black opacity-50">{t.id}</span>
                     <TableIcon className="w-5 h-5" />
@@ -301,10 +301,10 @@ const Table_Management = () => {
                   <div className="w-2 h-2 rounded-full bg-green-500" /> Available
                 </div>
                 <div className="flex items-center gap-2 text-[10px] font-bold text-slate-400 uppercase tracking-widest">
-                  <div className="w-2 h-2 rounded-full bg-orange-500" /> Occupied
+                  <div className="w-2 h-2 rounded-full bg-brand-600" /> Occupied
                 </div>
                 <div className="flex items-center gap-2 text-[10px] font-bold text-slate-400 uppercase tracking-widest">
-                  <div className="w-2 h-2 rounded-full bg-blue-500" /> Reserved
+                  <div className="w-2 h-2 rounded-full bg-brand-500" /> Reserved
                 </div>
               </div>
             </div>
@@ -316,7 +316,7 @@ const Table_Management = () => {
       <section className="py-32 bg-white text-center">
         <div className="min-w-4xl mx-auto px-6 space-y-12">
           <div className="flex justify-center gap-1">
-            {[...Array(5)].map((_, i) => <Star key={i} className="w-6 h-6 fill-orange-500 text-orange-500" />)}
+            {[...Array(5)].map((_, i) => <Star key={i} className="w-6 h-6 fill-brand-600 text-brand-600" />)}
           </div>
           <motion.blockquote
             initial={{ opacity: 0, y: 20 }}
@@ -328,11 +328,11 @@ const Table_Management = () => {
           </motion.blockquote>
           <div className="flex flex-col items-center gap-4">
             <div className="w-20 h-20 rounded-full bg-slate-200 border-4 border-slate-50 overflow-hidden">
-              <div className="w-full h-full bg-gradient-to-br from-orange-400 to-orange-600 flex items-center justify-center text-white font-black text-2xl uppercase">RK</div>
+              <div className="w-full h-full bg-gradient-to-br from-brand-500 to-brand-700 flex items-center justify-center text-white font-black text-2xl uppercase">RK</div>
             </div>
             <div>
               <p className="text-xl font-black text-slate-900">Rohan Kapoor</p>
-              <p className="font-bold text-orange-600 uppercase tracking-widest text-xs">Director, Spice Garden</p>
+              <p className="font-bold text-brand-700 uppercase tracking-widest text-xs">Director, Spice Garden</p>
             </div>
           </div>
         </div>
@@ -341,7 +341,7 @@ const Table_Management = () => {
       {/* 7. Call To Action Section */}
       <section className="py-24 px-6 bg-slate-50">
         <div className="min-w-5xl mx-auto bg-slate-950 rounded-[4rem] p-12 lg:p-24 text-center relative overflow-hidden shadow-2xl">
-          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-full bg-orange-600/10 blur-[120px]" />
+          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-full bg-brand-700/10 blur-[120px]" />
 
           <div className="relative z-10 space-y-10">
             <h2 className="text-4xl md:text-6xl font-black text-white leading-tight">Start Managing Your <br />Tables Smarter</h2>
@@ -349,7 +349,7 @@ const Table_Management = () => {
               Join hundreds of restaurants using Restaurant Mitra to optimize their floor operations and increase profitability.
             </p>
             <div className="flex flex-wrap justify-center gap-6">
-              <button className="px-12 py-6 bg-orange-500 hover:bg-orange-400 text-white font-black rounded-[1.5rem] shadow-2xl shadow-orange-500/30 transition-all hover:scale-105 active:scale-95">
+              <button className="px-12 py-6 bg-brand-600 hover:bg-brand-500 text-white font-black rounded-[1.5rem] shadow-2xl shadow-brand-600/30 transition-all hover:scale-105 active:scale-95">
                 Get Started for Free
               </button>
               <button className="px-12 py-6 bg-white/10 hover:bg-white/20 text-white font-black rounded-[1.5rem] backdrop-blur-md border border-white/10 transition-all">

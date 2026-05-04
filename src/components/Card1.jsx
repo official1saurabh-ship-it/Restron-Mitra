@@ -3,9 +3,9 @@ import React from 'react'
 const Card1 = ({ image, heading, description, index }) => {
     const colors = [
         {
-            bg: "bg-blue-100",
-            border: "border-blue-500",
-            gradient: "from-blue-500 to-indigo-500",
+            bg: "bg-brand-100",
+            border: "border-brand-500",
+            gradient: "from-brand-500 to-brand-600",
         },
         {
             bg: "bg-green-100",
@@ -13,9 +13,9 @@ const Card1 = ({ image, heading, description, index }) => {
             gradient: "from-green-500 to-emerald-500",
         },
         {
-            bg: "bg-purple-100",
-            border: "border-purple-500",
-            gradient: "from-purple-500 to-pink-500",
+            bg: "bg-brand-100",
+            border: "border-brand-500",
+            gradient: "from-brand-500 to-brand-700",
         },
     ];
 

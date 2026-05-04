@@ -10,25 +10,25 @@ const AnalyticsReports = () => {
     <div className="bg-white text-slate-900">
 
       {/* HERO */}
-      <section className="py-12 md:py-24 bg-gradient-to-br from-orange-50 to-white">
+      <section className="py-12 md:py-24 bg-gradient-to-br from-brand-50 to-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 grid md:grid-cols-2 gap-12 items-center">
           <button
             onClick={() => navigate(-1)}
-            className="absolute right-4 sm:right-6 top-8 sm:top-12 p-3 rounded-full bg-slate-50 hover:bg-purple-600 hover:text-white text-slate-600 transition-all duration-300 shadow-sm hover:shadow-lg group z-10"
+            className="absolute right-4 sm:right-6 top-8 sm:top-12 p-3 rounded-full bg-slate-50 hover:bg-brand-600 hover:text-white text-slate-600 transition-all duration-300 shadow-sm hover:shadow-lg group z-10"
           >
             <ArrowLeft className="w-6 h-6 group-hover:-translate-x-1 transition-transform" />
           </button>
 
           <div>
             <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold leading-tight">
-              Smart <span className="text-orange-500">Analytics & Reports</span>
+              Smart <span className="text-brand-600">Analytics & Reports</span>
             </h1>
             <p className="mt-6 text-slate-500 text-lg">
               Get real-time insights into your sales, performance, and customer trends to grow your restaurant.
             </p>
 
             <div className="mt-8 flex flex-wrap gap-4">
-              <button className="px-6 py-3 bg-orange-500 text-white rounded-xl w-full sm:w-auto">
+              <button className="px-6 py-3 bg-brand-600 text-white rounded-xl w-full sm:w-auto">
                 View Dashboard
               </button>
               <button className="px-6 py-3 border rounded-xl w-full sm:w-auto">
@@ -52,11 +52,11 @@ const AnalyticsReports = () => {
               <span className="font-bold text-right ml-4">Paneer Butter Masala</span>
             </div>
 
-            <div className="h-24 bg-orange-100 rounded-xl flex items-end gap-2 p-2">
+            <div className="h-24 bg-brand-100 rounded-xl flex items-end gap-2 p-2">
               {[40, 60, 80, 50, 90].map((h, i) => (
                 <div
                   key={i}
-                  className="bg-orange-500 w-full rounded"
+                  className="bg-brand-600 w-full rounded"
                   style={{ height: `${h}%` }}
                 />
               ))}
@@ -73,7 +73,7 @@ const AnalyticsReports = () => {
           {/* Heading */}
           <div className="text-center max-w-2xl mx-auto mb-16">
             <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-slate-900 leading-tight">
-              Running a Restaurant <span className="text-orange-500">Without Data</span> is Risky
+              Running a Restaurant <span className="text-brand-600">Without Data</span> is Risky
             </h2>
             <p className="text-slate-500 mt-4 px-2">
               Lack of insights leads to poor decisions, wasted resources, and missed growth opportunities.
@@ -107,15 +107,15 @@ const AnalyticsReports = () => {
               >
 
                 {/* Glow */}
-                <div className="absolute inset-0 bg-orange-500/5 opacity-0 group-hover:opacity-100 transition duration-500 rounded-2xl" />
+                <div className="absolute inset-0 bg-brand-600/5 opacity-0 group-hover:opacity-100 transition duration-500 rounded-2xl" />
 
                 {/* Icon */}
-                <div className="w-12 h-12 flex items-center justify-center rounded-lg bg-orange-50 text-orange-500 mb-4 group-hover:bg-orange-500 group-hover:text-white transition">
+                <div className="w-12 h-12 flex items-center justify-center rounded-lg bg-brand-50 text-brand-600 mb-4 group-hover:bg-brand-600 group-hover:text-white transition">
                   ⚠️
                 </div>
 
                 {/* Title */}
-                <h3 className="font-bold text-lg text-slate-900 mb-2 group-hover:text-orange-500 transition">
+                <h3 className="font-bold text-lg text-slate-900 mb-2 group-hover:text-brand-600 transition">
                   {item.title}
                 </h3>
 
@@ -125,7 +125,7 @@ const AnalyticsReports = () => {
                 </p>
 
                 {/* Bottom line animation */}
-                <div className="mt-4 h-[2px] w-0 bg-orange-500 group-hover:w-full transition-all duration-500" />
+                <div className="mt-4 h-[2px] w-0 bg-brand-600 group-hover:w-full transition-all duration-500" />
 
               </div>
             ))}
@@ -141,7 +141,7 @@ const AnalyticsReports = () => {
 
           <div className="text-center mb-16">
             <h2 className="text-3xl sm:text-4xl font-bold">
-              Powerful <span className="text-orange-500">Analytics</span> Features
+              Powerful <span className="text-brand-600">Analytics</span> Features
             </h2>
             <p className="text-slate-500 mt-4">
               Understand your business with real-time data insights.
@@ -179,8 +179,8 @@ const AnalyticsReports = () => {
                 key={i}
                 className="group p-8 rounded-2xl bg-white shadow-sm hover:shadow-xl hover:-translate-y-2 transition-all duration-500"
               >
-                <div className="text-orange-500 text-2xl mb-4">📊</div>
-                <h3 className="font-bold text-lg mb-2 group-hover:text-orange-500">
+                <div className="text-brand-600 text-2xl mb-4">📊</div>
+                <h3 className="font-bold text-lg mb-2 group-hover:text-brand-600">
                   {item.title}
                 </h3>
                 <p className="text-slate-500 text-sm">{item.desc}</p>
@@ -198,7 +198,7 @@ const AnalyticsReports = () => {
           {/* Heading */}
           <div className="text-center max-w-2xl mx-auto mb-16 md:mb-20">
             <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-slate-900">
-              How It <span className="text-orange-500">Works</span>
+              How It <span className="text-brand-600">Works</span>
             </h2>
             <p className="text-slate-500 mt-4">
               From order to insight — everything is automated and seamless.
@@ -238,12 +238,12 @@ const AnalyticsReports = () => {
                 {/* Step Number */}
 
                 {/* Icon */}
-                <div className="w-12 h-12 flex items-center justify-center bg-orange-100 text-orange-500 rounded-xl mb-5 group-hover:bg-orange-500 group-hover:text-white transition">
+                <div className="w-12 h-12 flex items-center justify-center bg-brand-100 text-brand-600 rounded-xl mb-5 group-hover:bg-brand-600 group-hover:text-white transition">
                   ⚡
                 </div>
 
                 {/* Title */}
-                <h3 className="font-bold text-lg text-slate-900 mb-2 group-hover:text-orange-500 transition">
+                <h3 className="font-bold text-lg text-slate-900 mb-2 group-hover:text-brand-600 transition">
                   {item.title}
                 </h3>
 
@@ -253,7 +253,7 @@ const AnalyticsReports = () => {
                 </p>
 
                 {/* Hover Line */}
-                <div className="mt-5 h-[2px] w-0 bg-orange-500 group-hover:w-full transition-all duration-500" />
+                <div className="mt-5 h-[2px] w-0 bg-brand-600 group-hover:w-full transition-all duration-500" />
 
               </div>
             ))}
@@ -270,17 +270,17 @@ const AnalyticsReports = () => {
 
           <div className="flex flex-col sm:flex-row justify-center items-center gap-10 sm:gap-12 mt-12">
             <div>
-              <h3 className="text-3xl sm:text-4xl font-bold text-orange-500">35%</h3>
+              <h3 className="text-3xl sm:text-4xl font-bold text-brand-600">35%</h3>
               <p className="text-sm text-slate-500">Better Decisions</p>
             </div>
 
             <div>
-              <h3 className="text-3xl sm:text-4xl font-bold text-orange-500">50%</h3>
+              <h3 className="text-3xl sm:text-4xl font-bold text-brand-600">50%</h3>
               <p className="text-sm text-slate-500">Faster Insights</p>
             </div>
 
             <div>
-              <h3 className="text-3xl sm:text-4xl font-bold text-orange-500">100%</h3>
+              <h3 className="text-3xl sm:text-4xl font-bold text-brand-600">100%</h3>
               <p className="text-sm text-slate-500">Real-Time Data</p>
             </div>
           </div>
@@ -288,12 +288,12 @@ const AnalyticsReports = () => {
       </section>
 
       {/* CTA */}
-      <section className="py-16 md:py-24 text-center bg-orange-500 text-white">
+      <section className="py-16 md:py-24 text-center bg-brand-600 text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
           <h2 className="text-3xl sm:text-4xl font-bold">
             Make Data-Driven Decisions Today
           </h2>
-          <button className="mt-8 px-8 py-4 bg-white text-orange-500 rounded-xl font-bold hover:bg-orange-50 transition-colors shadow-lg">
+          <button className="mt-8 px-8 py-4 bg-white text-brand-600 rounded-xl font-bold hover:bg-brand-50 transition-colors shadow-lg">
             Get Started
           </button>
         </div>

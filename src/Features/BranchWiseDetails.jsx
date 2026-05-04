@@ -10,14 +10,14 @@ const BranchWiseDetails = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 py-8 md:py-12 relative">
         <button
           onClick={() => navigate(-1)}
-          className="absolute right-4 sm:right-6 top-4 sm:top-12 p-3 rounded-full bg-slate-50 hover:bg-purple-600 hover:text-white text-slate-600 transition-all duration-300 shadow-sm hover:shadow-lg group z-10"
+          className="absolute right-4 sm:right-6 top-4 sm:top-12 p-3 rounded-full bg-slate-50 hover:bg-brand-600 hover:text-white text-slate-600 transition-all duration-300 shadow-sm hover:shadow-lg group z-10"
         >
           <ArrowLeft className="w-6 h-6 group-hover:-translate-x-1 transition-transform" />
         </button>
 
 
 
-        <section className="py-12 md:py-24 bg-gradient-to-br from-orange-50 via-white to-slate-50">
+        <section className="py-12 md:py-24 bg-gradient-to-br from-brand-50 via-white to-slate-50">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 grid lg:grid-cols-2 gap-12 items-center">
 
             {/* LEFT CONTENT */}
@@ -25,7 +25,7 @@ const BranchWiseDetails = () => {
 
               <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold leading-tight text-slate-900">
                 Manage All Your <br className="hidden sm:block" />
-                <span className="text-orange-500">Branches in One Place</span>
+                <span className="text-brand-600">Branches in One Place</span>
               </h1>
 
               <p className="text-slate-500 text-lg max-w-xl">
@@ -34,11 +34,11 @@ const BranchWiseDetails = () => {
 
               {/* CTA */}
               <div className="flex flex-col sm:flex-row gap-4 pt-4">
-                <button className="px-6 py-3 bg-orange-500 text-white rounded-xl shadow-lg hover:scale-105 transition w-full sm:w-auto">
+                <button className="px-6 py-3 bg-brand-600 text-white rounded-xl shadow-lg hover:scale-105 transition w-full sm:w-auto">
                   Get Started
                 </button>
 
-                <button className="px-6 py-3 border border-slate-300 rounded-xl hover:border-orange-500 hover:text-orange-500 transition w-full sm:w-auto">
+                <button className="px-6 py-3 border border-slate-300 rounded-xl hover:border-brand-600 hover:text-brand-600 transition w-full sm:w-auto">
                   Book Demo
                 </button>
               </div>
@@ -83,10 +83,10 @@ const BranchWiseDetails = () => {
                   ].map((b, i) => (
                     <div
                       key={i}
-                      className="flex justify-between items-center p-4 bg-slate-50 rounded-xl hover:bg-orange-50 transition"
+                      className="flex justify-between items-center p-4 bg-slate-50 rounded-xl hover:bg-brand-50 transition"
                     >
                       <span className="font-medium text-sm sm:text-base">{b.name}</span>
-                      <span className="font-bold text-orange-500 text-sm sm:text-base">{b.sales}</span>
+                      <span className="font-bold text-brand-600 text-sm sm:text-base">{b.sales}</span>
                     </div>
                   ))}
                 </div>
@@ -94,7 +94,7 @@ const BranchWiseDetails = () => {
               </div>
 
               {/* Floating Glow */}
-              <div className="absolute -z-10 w-72 h-72 bg-orange-200 blur-3xl opacity-30 rounded-full top-10 right-10"></div>
+              <div className="absolute -z-10 w-72 h-72 bg-brand-200 blur-3xl opacity-30 rounded-full top-10 right-10"></div>
 
             </div>
 
@@ -109,7 +109,7 @@ const BranchWiseDetails = () => {
 
             <div className="text-center max-w-2xl mx-auto mb-16">
               <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-slate-900">
-                Managing Multiple Branches is <span className="text-orange-500">Hard</span>
+                Managing Multiple Branches is <span className="text-brand-600">Hard</span>
               </h2>
               <p className="text-slate-500 mt-4">
                 Without centralized control, it becomes difficult to track performance and maintain consistency.
@@ -140,11 +140,11 @@ const BranchWiseDetails = () => {
                   key={i}
                   className="group p-6 bg-white rounded-2xl border shadow-sm hover:shadow-xl hover:-translate-y-2 transition-all duration-500"
                 >
-                  <div className="w-12 h-12 bg-orange-100 text-orange-500 flex items-center justify-center rounded-lg mb-4">
+                  <div className="w-12 h-12 bg-brand-100 text-brand-600 flex items-center justify-center rounded-lg mb-4">
                     ⚠️
                   </div>
 
-                  <h3 className="font-bold text-lg mb-2 group-hover:text-orange-500">
+                  <h3 className="font-bold text-lg mb-2 group-hover:text-brand-600">
                     {item.title}
                   </h3>
 
@@ -160,7 +160,7 @@ const BranchWiseDetails = () => {
 
             <div className="text-center max-w-2xl mx-auto mb-16 md:mb-20">
               <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-slate-900">
-                How It <span className="text-orange-500">Works</span>
+                How It <span className="text-brand-600">Works</span>
               </h2>
               <p className="text-slate-500 mt-4">
                 Manage all your branches from a single dashboard effortlessly.
@@ -196,21 +196,21 @@ const BranchWiseDetails = () => {
                   className="group relative p-8 bg-slate-50 rounded-2xl border shadow-sm hover:shadow-2xl hover:-translate-y-2 transition-all duration-500 mt-6 sm:mt-0"
                 >
 
-                  <div className="absolute -top-5 left-6 w-10 h-10 bg-orange-500 text-white flex items-center justify-center rounded-full font-bold">
+                  <div className="absolute -top-5 left-6 w-10 h-10 bg-brand-600 text-white flex items-center justify-center rounded-full font-bold">
                     {item.step}
                   </div>
 
-                  <div className="w-12 h-12 bg-orange-100 text-orange-500 flex items-center justify-center rounded-xl mb-5 group-hover:bg-orange-500 group-hover:text-white transition">
+                  <div className="w-12 h-12 bg-brand-100 text-brand-600 flex items-center justify-center rounded-xl mb-5 group-hover:bg-brand-600 group-hover:text-white transition">
                     🏢
                   </div>
 
-                  <h3 className="font-bold text-lg mb-2 group-hover:text-orange-500">
+                  <h3 className="font-bold text-lg mb-2 group-hover:text-brand-600">
                     {item.title}
                   </h3>
 
                   <p className="text-slate-500 text-sm">{item.desc}</p>
 
-                  <div className="mt-5 h-[2px] w-0 bg-orange-500 group-hover:w-full transition-all duration-500" />
+                  <div className="mt-5 h-[2px] w-0 bg-brand-600 group-hover:w-full transition-all duration-500" />
                 </div>
               ))}
 
@@ -236,11 +236,11 @@ const BranchWiseDetails = () => {
                 ].map((b, i) => (
                   <div
                     key={i}
-                    className="p-4 sm:p-6 bg-slate-50 rounded-xl hover:bg-orange-50 transition border border-transparent hover:border-orange-100"
+                    className="p-4 sm:p-6 bg-slate-50 rounded-xl hover:bg-brand-50 transition border border-transparent hover:border-brand-100"
                   >
                     <h4 className="font-semibold text-slate-900">{b.name}</h4>
                     <p className="text-xs sm:text-sm text-slate-500 mb-2">Sales</p>
-                    <p className="text-xl sm:text-2xl font-bold text-orange-500">{b.sales}</p>
+                    <p className="text-xl sm:text-2xl font-bold text-brand-600">{b.sales}</p>
                   </div>
                 ))}
 

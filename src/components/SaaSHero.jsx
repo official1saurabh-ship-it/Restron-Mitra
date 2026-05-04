@@ -28,7 +28,7 @@ const SaaSHero = () => {
             className="text-5xl md:text-7xl font-extrabold text-white tracking-tight mb-6"
           >
             All-in-One <br />
-            <span className="bg-gradient-to-r from-saas-accent to-purple-400 bg-clip-text text-transparent">
+            <span className="bg-gradient-to-r from-saas-accent to-brand-500 bg-clip-text text-transparent">
               Restaurant Management
             </span>
           </motion.h1>

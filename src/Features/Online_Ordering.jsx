@@ -31,14 +31,14 @@ const Online_Ordering = () => {
       {/* Hero Section */}
       <section className="relative pt-32 pb-20 lg:pt-48 lg:pb-32 bg-slate-950 overflow-hidden">
         <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full h-full overflow-hidden pointer-events-none">
-          <div className="absolute top-[-10%] right-[-10%] w-[40%] h-[60%] bg-orange-600/20 blur-[120px] rounded-full" />
-          <div className="absolute bottom-[-10%] left-[-10%] w-[40%] h-[60%] bg-indigo-600/10 blur-[120px] rounded-full" />
+          <div className="absolute top-[-10%] right-[-10%] w-[40%] h-[60%] bg-brand-700/20 blur-[120px] rounded-full" />
+          <div className="absolute bottom-[-10%] left-[-10%] w-[40%] h-[60%] bg-brand-600/10 blur-[120px] rounded-full" />
         </div>
 
         <div className="max-w-7xl mx-auto px-6 relative z-10">
           <button
             onClick={() => navigate(-1)}
-            className="mb-8 inline-flex items-center gap-2 text-slate-400 hover:text-orange-500 transition-colors group"
+            className="mb-8 inline-flex items-center gap-2 text-slate-400 hover:text-brand-600 transition-colors group"
           >
             <ArrowLeft className="w-5 h-5 group-hover:-translate-x-1 transition-transform" />
             <span className="font-bold text-sm uppercase tracking-widest">Back to Home</span>
@@ -49,7 +49,7 @@ const Online_Ordering = () => {
               <motion.div
                 initial={{ opacity: 0, x: -20 }}
                 animate={{ opacity: 1, x: 0 }}
-                className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-orange-500/10 border border-orange-500/20 text-orange-500 text-[10px] md:text-xs font-bold tracking-widest uppercase"
+                className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-brand-600/10 border border-brand-600/20 text-brand-600 text-[10px] md:text-xs font-bold tracking-widest uppercase"
               >
                 <Globe className="w-4 h-4" />
                 <span>Zero Commission Ordering</span>
@@ -61,7 +61,7 @@ const Online_Ordering = () => {
                 className="text-4xl md:text-5xl lg:text-7xl font-black text-white leading-tight"
               >
                 Accept Orders Directly, <br />
-                <span className="text-orange-500">Without Commissions</span>
+                <span className="text-brand-600">Without Commissions</span>
               </motion.h1>
 
               <motion.p
@@ -79,7 +79,7 @@ const Online_Ordering = () => {
                 transition={{ delay: 0.2 }}
                 className="flex flex-wrap justify-center lg:justify-start gap-4"
               >
-                <button className="px-6 md:px-8 py-3 md:py-4 bg-orange-500 hover:bg-orange-400 text-white font-black rounded-2xl shadow-xl shadow-orange-500/20 transition-all hover:scale-105 active:scale-95 text-sm md:text-base">
+                <button className="px-6 md:px-8 py-3 md:py-4 bg-brand-600 hover:bg-brand-500 text-white font-black rounded-2xl shadow-xl shadow-brand-600/20 transition-all hover:scale-105 active:scale-95 text-sm md:text-base">
                   Start Accepting Orders
                 </button>
                 <button className="px-6 md:px-8 py-3 md:py-4 bg-white/5 hover:bg-white/10 text-white border border-white/10 font-black rounded-2xl backdrop-blur-md transition-all text-sm md:text-base">
@@ -105,7 +105,7 @@ const Online_Ordering = () => {
       <section className="py-24 bg-white">
         <div className="max-w-7xl mx-auto px-6">
           <div className="text-center mb-16 space-y-4">
-            <h2 className="text-sm font-black text-orange-500 uppercase tracking-[0.3em]">The Problem</h2>
+            <h2 className="text-sm font-black text-brand-600 uppercase tracking-[0.3em]">The Problem</h2>
             <h3 className="text-3xl md:text-5xl font-black text-slate-900">Why Third-Party Apps <br />Are Hurting Your Business</h3>
           </div>
 
@@ -136,7 +136,7 @@ const Online_Ordering = () => {
             viewport={{ once: true }}
             className="space-y-8"
           >
-            <h2 className="text-sm font-black text-orange-500 uppercase tracking-[0.3em]">The Solution</h2>
+            <h2 className="text-sm font-black text-brand-600 uppercase tracking-[0.3em]">The Solution</h2>
             <h3 className="text-3xl md:text-5xl font-black text-slate-900 leading-tight">Your Branded Ordering <br />Ecosystem</h3>
             <p className="text-xl text-slate-600 font-medium leading-relaxed max-w-3xl mx-auto">
               Take back control with a direct-to-consumer ordering system. Provide a seamless experience on your own domain, collect valuable customer insights, and manage everything from a single dashboard.
@@ -153,7 +153,7 @@ const Online_Ordering = () => {
                   key={i}
                   className="flex items-center gap-3 font-bold text-slate-800 bg-white px-8 py-4 rounded-[2rem] border border-slate-200 shadow-sm"
                 >
-                  <CheckCircle2 className="w-5 h-5 text-orange-500" />
+                  <CheckCircle2 className="w-5 h-5 text-brand-600" />
                   <span>{text}</span>
                 </div>
               ))}
@@ -166,7 +166,7 @@ const Online_Ordering = () => {
       <section className="py-24 bg-white">
         <div className="max-w-7xl mx-auto px-6">
           <div className="text-center mb-16 space-y-4">
-            <h2 className="text-sm font-black text-orange-500 uppercase tracking-[0.3em]">Core Features</h2>
+            <h2 className="text-sm font-black text-brand-600 uppercase tracking-[0.3em]">Core Features</h2>
             <h3 className="text-3xl md:text-5xl font-black text-slate-900">Powerful Tools for Growth</h3>
           </div>
 
@@ -179,9 +179,9 @@ const Online_Ordering = () => {
               { icon: Truck, title: "Order Tracking", desc: "Keep customers informed with real-time status updates from prep to delivery." },
               { icon: Zap, title: "Integration with POS system", desc: "Orders flow directly into your Restaurant Mitra POS—no manual entry needed." }
             ].map((feat, i) => (
-              <div key={i} className="p-10 rounded-[2.5rem] bg-white border border-slate-100 hover:border-orange-200 hover:shadow-xl hover:shadow-orange-500/5 transition-all duration-500 group">
-                <div className="w-14 h-14 bg-orange-50 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-orange-500 transition-colors duration-500">
-                  <feat.icon className="w-7 h-7 text-orange-600 group-hover:text-white transition-colors duration-500" />
+              <div key={i} className="p-10 rounded-[2.5rem] bg-white border border-slate-100 hover:border-brand-200 hover:shadow-xl hover:shadow-brand-600/5 transition-all duration-500 group">
+                <div className="w-14 h-14 bg-brand-50 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-brand-600 transition-colors duration-500">
+                  <feat.icon className="w-7 h-7 text-brand-700 group-hover:text-white transition-colors duration-500" />
                 </div>
                 <h4 className="text-xl font-black text-slate-900 mb-3">{feat.title}</h4>
                 <p className="text-slate-500 font-medium leading-relaxed">{feat.desc}</p>
@@ -195,7 +195,7 @@ const Online_Ordering = () => {
       <section className="py-24 bg-slate-950 text-white overflow-hidden">
         <div className="max-w-7xl mx-auto px-6">
           <div className="text-center mb-20 space-y-4">
-            <h2 className="text-sm font-black text-orange-500 uppercase tracking-[0.3em]">How It Works</h2>
+            <h2 className="text-sm font-black text-brand-600 uppercase tracking-[0.3em]">How It Works</h2>
             <h3 className="text-3xl md:text-5xl font-black">From Click to Kitchen</h3>
           </div>
 
@@ -208,7 +208,7 @@ const Online_Ordering = () => {
               { step: "05", title: "Order Processed", desc: "Order is packed and delivered. Profit stays 100% with you." }
             ].map((item, i) => (
               <div key={i} className="space-y-6">
-                <div className="w-16 h-16 bg-white/5 border border-white/10 rounded-2xl flex items-center justify-center text-orange-500 font-black text-2xl">
+                <div className="w-16 h-16 bg-white/5 border border-white/10 rounded-2xl flex items-center justify-center text-brand-600 font-black text-2xl">
                   {item.step}
                 </div>
                 <div className="space-y-2">
@@ -226,7 +226,7 @@ const Online_Ordering = () => {
         <div className="max-w-7xl mx-auto px-6">
           <div className="flex flex-col lg:flex-row items-center gap-20">
             <div className="lg:w-1/2 space-y-8">
-              <h2 className="text-sm font-black text-orange-500 uppercase tracking-[0.3em]">Multi-Platform Experience</h2>
+              <h2 className="text-sm font-black text-brand-600 uppercase tracking-[0.3em]">Multi-Platform Experience</h2>
               <h3 className="text-3xl md:text-5xl font-black text-slate-900 leading-tight">One System, <br />Every Device</h3>
               <p className="text-lg text-slate-600 font-medium leading-relaxed">
                 Whether your customer is ordering from their phone or your manager is tracking sales on a laptop, everything is synchronized in real-time. Experience zero lag between order placement and kitchen fulfillment.
@@ -267,7 +267,7 @@ const Online_Ordering = () => {
               { icon: BarChart3, label: "More Repeat Orders", desc: "Use direct marketing to bring customers back more often." }
             ].map((item, i) => (
               <div key={i} className="p-8 space-y-4">
-                <div className="w-12 h-12 bg-orange-500 rounded-xl flex items-center justify-center mx-auto text-white shadow-lg shadow-orange-500/20">
+                <div className="w-12 h-12 bg-brand-600 rounded-xl flex items-center justify-center mx-auto text-white shadow-lg shadow-brand-600/20">
                   <item.icon className="w-6 h-6" />
                 </div>
                 <h4 className="text-xl font-bold text-slate-900">{item.label}</h4>
@@ -282,7 +282,7 @@ const Online_Ordering = () => {
       <section className="py-24 bg-white">
         <div className="max-w-4xl mx-auto px-6 text-center space-y-8">
           <div className="flex justify-center gap-1">
-            {[1, 2, 3, 4, 5].map(i => <Star key={i} className="w-6 h-6 fill-orange-500 text-orange-500" />)}
+            {[1, 2, 3, 4, 5].map(i => <Star key={i} className="w-6 h-6 fill-brand-600 text-brand-600" />)}
           </div>
           <p className="text-2xl md:text-3xl font-black text-slate-900 leading-tight">
             "Restaurant Mitra gave us the freedom to serve our customers directly. Our profit margins have improved by 25% since we stopped paying commissions."
@@ -301,7 +301,7 @@ const Online_Ordering = () => {
       {/* Final CTA Section */}
       <section className="py-24 px-6">
         <div className="max-w-5xl mx-auto bg-slate-950 rounded-[3rem] p-12 lg:p-20 text-center relative overflow-hidden">
-          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-full bg-orange-600/10 blur-[120px]" />
+          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-full bg-brand-700/10 blur-[120px]" />
 
           <div className="relative z-10 space-y-8">
             <h2 className="text-4xl md:text-6xl font-black text-white leading-tight">Start Taking Direct <br />Orders Today</h2>
@@ -310,7 +310,7 @@ const Online_Ordering = () => {
               No commissions. No middlemen. Just pure growth.
             </p>
             <div className="flex flex-wrap justify-center gap-6 pt-4">
-              <button className="px-10 py-5 bg-orange-500 hover:bg-orange-400 text-white font-black rounded-2xl shadow-2xl shadow-orange-500/30 transition-all hover:scale-105">
+              <button className="px-10 py-5 bg-brand-600 hover:bg-brand-500 text-white font-black rounded-2xl shadow-2xl shadow-brand-600/30 transition-all hover:scale-105">
                 Start Accepting Orders
               </button>
               <button className="px-10 py-5 bg-white/10 hover:bg-white/20 text-white font-black rounded-2xl backdrop-blur-md border border-white/10 transition-all">

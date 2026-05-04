@@ -5,13 +5,13 @@ const RoleBasedPermission = () => {
     <div className="bg-white text-slate-900">
 
       {/* HERO */}
-      <section className="py-24 bg-gradient-to-br from-orange-50 via-white to-slate-50">
+      <section className="py-24 bg-gradient-to-br from-brand-50 via-white to-slate-50">
         <div className="max-w-7xl mx-auto px-6 grid lg:grid-cols-2 gap-12 items-center">
 
           <div className="space-y-6">
             <h1 className="text-5xl md:text-6xl font-bold leading-tight">
               Secure Access with <br />
-              <span className="text-orange-500">Role-Based Permissions</span>
+              <span className="text-brand-600">Role-Based Permissions</span>
             </h1>
 
             <p className="text-slate-500 text-lg">
@@ -19,7 +19,7 @@ const RoleBasedPermission = () => {
             </p>
 
             <div className="flex gap-4 pt-4">
-              <button className="px-6 py-3 bg-orange-500 text-white rounded-xl">
+              <button className="px-6 py-3 bg-brand-600 text-white rounded-xl">
                 Get Started
               </button>
               <button className="px-6 py-3 border rounded-xl">
@@ -53,7 +53,7 @@ const RoleBasedPermission = () => {
                 className="flex justify-between p-3 bg-slate-50 rounded-lg mb-3"
               >
                 <span>{item.role}</span>
-                <span className="text-orange-500 text-sm">{item.access}</span>
+                <span className="text-brand-600 text-sm">{item.access}</span>
               </div>
             ))}
           </div>
@@ -166,26 +166,26 @@ const RoleBasedPermission = () => {
 
         <div className="flex justify-center gap-12 mt-12">
           <div>
-            <h3 className="text-3xl font-bold text-orange-500">100%</h3>
+            <h3 className="text-3xl font-bold text-brand-600">100%</h3>
             <p className="text-sm text-slate-500">Data Security</p>
           </div>
           <div>
-            <h3 className="text-3xl font-bold text-orange-500">50%</h3>
+            <h3 className="text-3xl font-bold text-brand-600">50%</h3>
             <p className="text-sm text-slate-500">Less Errors</p>
           </div>
           <div>
-            <h3 className="text-3xl font-bold text-orange-500">3x</h3>
+            <h3 className="text-3xl font-bold text-brand-600">3x</h3>
             <p className="text-sm text-slate-500">Better Control</p>
           </div>
         </div>
       </section>
 
       {/* CTA */}
-      <section className="py-24 bg-orange-500 text-white text-center">
+      <section className="py-24 bg-brand-600 text-white text-center">
         <h2 className="text-4xl font-bold">
           Control Your Restaurant with Confidence
         </h2>
-        <button className="mt-6 px-6 py-3 bg-white text-orange-500 rounded-xl">
+        <button className="mt-6 px-6 py-3 bg-white text-brand-600 rounded-xl">
           Get Started
         </button>
       </section>

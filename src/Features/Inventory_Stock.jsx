@@ -5,19 +5,19 @@ const InventoryStock = () => {
     <div className="bg-white text-slate-900">
 
       {/* HERO */}
-      <section className="py-12 md:py-24 bg-gradient-to-br from-orange-50 to-white">
+      <section className="py-12 md:py-24 bg-gradient-to-br from-brand-50 to-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 grid md:grid-cols-2 gap-12 items-center">
 
           <div>
             <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold leading-tight">
-              Smart <span className="text-orange-500">Inventory & Stock</span> Management
+              Smart <span className="text-brand-600">Inventory & Stock</span> Management
             </h1>
             <p className="mt-6 text-slate-500 text-lg">
               Track ingredients, avoid shortages, and manage your kitchen inventory in real time.
             </p>
 
             <div className="mt-8 flex flex-col sm:flex-row gap-4">
-              <button className="px-6 py-3 bg-orange-500 text-white rounded-xl w-full sm:w-auto">
+              <button className="px-6 py-3 bg-brand-600 text-white rounded-xl w-full sm:w-auto">
                 Start Free Trial
               </button>
               <button className="px-6 py-3 border rounded-xl w-full sm:w-auto">
@@ -64,7 +64,7 @@ const InventoryStock = () => {
               "Food wastage",
               "No visibility of inventory",
             ].map((item, i) => (
-              <div key={i} className="p-6 bg-slate-50 rounded-xl hover:bg-orange-50 transition-colors">
+              <div key={i} className="p-6 bg-slate-50 rounded-xl hover:bg-brand-50 transition-colors">
                 {item}
               </div>
             ))}
@@ -79,7 +79,7 @@ const InventoryStock = () => {
     {/* Heading */}
     <div className="text-center mb-16">
       <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-slate-900">
-        Powerful <span className="text-orange-500">Inventory Features</span>
+        Powerful <span className="text-brand-600">Inventory Features</span>
       </h2>
       <p className="text-slate-500 mt-4 max-w-2xl mx-auto px-2">
         Everything you need to manage stock efficiently and avoid shortages.
@@ -121,15 +121,15 @@ const InventoryStock = () => {
         >
 
           {/* Top Accent Bar */}
-          <div className="absolute top-0 left-0 w-full h-1 bg-orange-500 scale-x-0 group-hover:scale-x-100 transition-transform origin-left duration-500" />
+          <div className="absolute top-0 left-0 w-full h-1 bg-brand-600 scale-x-0 group-hover:scale-x-100 transition-transform origin-left duration-500" />
 
           {/* Icon */}
-          <div className="w-14 h-14 flex items-center justify-center rounded-xl bg-orange-50 text-orange-500 text-2xl mb-6 group-hover:bg-orange-500 group-hover:text-white transition-all duration-500">
+          <div className="w-14 h-14 flex items-center justify-center rounded-xl bg-brand-50 text-brand-600 text-2xl mb-6 group-hover:bg-brand-600 group-hover:text-white transition-all duration-500">
             ⚡
           </div>
 
           {/* Title */}
-          <h3 className="text-xl font-bold text-slate-900 mb-3 group-hover:text-orange-500 transition-colors">
+          <h3 className="text-xl font-bold text-slate-900 mb-3 group-hover:text-brand-600 transition-colors">
             {item.title}
           </h3>
 
@@ -139,13 +139,13 @@ const InventoryStock = () => {
           </p>
 
           {/* Learn More */}
-          <div className="mt-6 flex items-center gap-2 text-sm font-semibold text-slate-300 group-hover:text-orange-500 transition-colors">
+          <div className="mt-6 flex items-center gap-2 text-sm font-semibold text-slate-300 group-hover:text-brand-600 transition-colors">
             <span>LEARN MORE</span>
-            <div className="h-px w-8 bg-slate-200 group-hover:w-12 group-hover:bg-orange-500 transition-all duration-500" />
+            <div className="h-px w-8 bg-slate-200 group-hover:w-12 group-hover:bg-brand-600 transition-all duration-500" />
           </div>
 
           {/* Glow effect */}
-          <div className="absolute inset-0 bg-orange-500/5 opacity-0 group-hover:opacity-100 transition duration-500 rounded-2xl" />
+          <div className="absolute inset-0 bg-brand-600/5 opacity-0 group-hover:opacity-100 transition duration-500 rounded-2xl" />
 
         </div>
       ))}
@@ -181,17 +181,17 @@ const InventoryStock = () => {
 
           <div className="flex flex-col sm:flex-row justify-center items-center gap-10 sm:gap-12 mt-12">
             <div>
-              <h3 className="text-3xl sm:text-4xl font-bold text-orange-500">40%</h3>
+              <h3 className="text-3xl sm:text-4xl font-bold text-brand-600">40%</h3>
               <p className="text-sm text-slate-500">Less Wastage</p>
             </div>
 
             <div>
-              <h3 className="text-3xl sm:text-4xl font-bold text-orange-500">25%</h3>
+              <h3 className="text-3xl sm:text-4xl font-bold text-brand-600">25%</h3>
               <p className="text-sm text-slate-500">Better Control</p>
             </div>
 
             <div>
-              <h3 className="text-3xl sm:text-4xl font-bold text-orange-500">100%</h3>
+              <h3 className="text-3xl sm:text-4xl font-bold text-brand-600">100%</h3>
               <p className="text-sm text-slate-500">Real-Time Tracking</p>
             </div>
           </div>
@@ -199,10 +199,10 @@ const InventoryStock = () => {
       </section>
 
       {/* CTA */}
-      <section className="py-16 md:py-24 text-center bg-orange-500 text-white">
+      <section className="py-16 md:py-24 text-center bg-brand-600 text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
           <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold">Never Run Out of Ingredients Again</h2>
-          <button className="mt-8 px-8 py-4 bg-white text-orange-500 rounded-xl font-bold hover:bg-orange-50 transition-colors shadow-lg">
+          <button className="mt-8 px-8 py-4 bg-white text-brand-600 rounded-xl font-bold hover:bg-brand-50 transition-colors shadow-lg">
             Get Started
           </button>
         </div>
