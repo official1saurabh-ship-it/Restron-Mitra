@@ -10,11 +10,11 @@ const AnalyticsReports = () => {
     <div className="bg-white text-slate-900">
 
       {/* HERO */}
-      <section className="py-12 md:py-24 bg-gradient-to-br from-brand-50 to-white">
+      <section className="pt-32 md:pt-40 pb-20 bg-gradient-to-br from-brand-50 to-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 grid md:grid-cols-2 gap-12 items-center">
           <button
             onClick={() => navigate(-1)}
-            className="absolute right-4 sm:right-6 top-8 sm:top-12 p-3 rounded-full bg-slate-50 hover:bg-brand-600 hover:text-white text-slate-600 transition-all duration-300 shadow-sm hover:shadow-lg group z-10"
+            className="absolute right-4 sm:right-6 top-24 sm:top-28 p-3 rounded-full bg-slate-50 hover:bg-brand-600 hover:text-white text-slate-600 transition-all duration-300 shadow-sm hover:shadow-lg group z-10"
           >
             <ArrowLeft className="w-6 h-6 group-hover:-translate-x-1 transition-transform" />
           </button>
@@ -28,10 +28,8 @@ const AnalyticsReports = () => {
             </p>
 
             <div className="mt-8 flex flex-wrap gap-4">
-              <button className="px-6 py-3 bg-brand-600 text-white rounded-xl w-full sm:w-auto">
-                View Dashboard
-              </button>
-              <button className="px-6 py-3 border rounded-xl w-full sm:w-auto">
+
+              <button onClick={() => navigate("/contact")} className="px-6 py-3 border rounded-xl w-full sm:w-auto">
                 Book Demo
               </button>
             </div>
@@ -293,7 +291,7 @@ const AnalyticsReports = () => {
           <h2 className="text-3xl sm:text-4xl font-bold">
             Make Data-Driven Decisions Today
           </h2>
-          <button className="mt-8 px-8 py-4 bg-white text-brand-600 rounded-xl font-bold hover:bg-brand-50 transition-colors shadow-lg">
+          <button onClick={() => navigate("/contact")} className="mt-8 px-8 py-4 bg-white text-brand-600 rounded-xl font-bold hover:bg-brand-50 transition-colors shadow-lg">
             Get Started
           </button>
         </div>

@@ -18,7 +18,7 @@ const Navbar = () => {
   const navItems = [
     { name: 'Home', path: '/', icon: Home },
     { name: 'Pricing', path: '/pricing', icon: CreditCard },
-    { name: 'Support', path: '/support', icon: LifeBuoy },
+    { name: 'Support', path: '/contact', icon: LifeBuoy },
   ];
 
   // Helper function to determine if a link is active
@@ -36,7 +36,7 @@ const Navbar = () => {
 
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 bg-white/80 backdrop-blur-xl border-b border-gray-200">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="max-w-full mx-auto px-4 sm:px-6 lg:px-12">
         <div className="flex items-center justify-between h-20">
           {/* Logo Section */}
           <div className="h-full flex items-center">
@@ -75,21 +75,26 @@ const Navbar = () => {
 
           {/* Desktop Actions */}
           <div className="hidden md:flex items-center gap-2 lg:gap-4">
-            <button className="text-gray-500 hover:text-gray-900 font-bold text-sm px-3 lg:px-4 py-2 transition-colors active:scale-95">
-              <a href="https://restaurants.biosoftech.in/login" > Login</a>
-            </button>
-            <button className="bg-saas-accent hover:bg-saas-accent/90 text-white px-4 lg:px-6 py-2.5 rounded-xl font-bold text-sm shadow-lg shadow-saas-accent/20 transition-all hover:scale-105 active:scale-95">
-              <button className="text-white hover:text-gray-900 font-bold text-sm px-3 lg:px-4 py-2 transition-colors active:scale-95">
-                <a href="https://restaurants.biosoftech.in/register" > Register</a>
-              </button>
-            </button>
+            <a 
+              href="https://restaurants.biosoftech.in/login" 
+              className="text-gray-600 hover:text-saas-accent font-bold text-sm px-4 py-2 transition-colors"
+            >
+              Login
+            </a>
+            <a 
+              href="https://restaurants.biosoftech.in/register" 
+              className="bg-saas-accent hover:bg-saas-accent/90 text-white px-6 py-2.5 rounded-xl font-bold text-sm shadow-lg shadow-saas-accent/20 transition-all hover:scale-105 active:scale-95"
+            >
+              Register
+            </a>
           </div>
 
           {/* Mobile Menu Button */}
           <div className="md:hidden">
             <button
               onClick={() => setMobileOpen(!mobileOpen)}
-              className="p-2 text-gray-500 hover:text-saas-accent transition-colors active:scale-90"
+              className="p-2 text-gray-600 hover:text-saas-accent transition-all active:scale-90 rounded-lg bg-gray-50"
+              aria-label="Toggle Menu"
             >
               {mobileOpen ? <X size={24} /> : <Menu size={24} />}
             </button>
@@ -100,40 +105,60 @@ const Navbar = () => {
       {/* Mobile Menu Drawer */}
       <AnimatePresence>
         {mobileOpen && (
-          <motion.div
-            initial={{ opacity: 0, height: 0 }}
-            animate={{ opacity: 1, height: 'auto' }}
-            exit={{ opacity: 0, height: 0 }}
-            className="md:hidden bg-white border-b border-saas-border overflow-hidden"
-          >
-            <div className="px-4 pt-2 pb-6 space-y-1">
-              {navItems.map((item) => {
-                const isActive = checkActive(item.path);
-                return (
-                  <Link
-                    key={item.name}
-                    to={item.path}
-                    onClick={() => setMobileOpen(false)}
-                    className={`flex items-center gap-3 px-4 py-4 rounded-xl font-bold transition-colors ${isActive
-                      ? 'bg-saas-accent/10 text-saas-accent'
-                      : 'text-gray-500 hover:bg-gray-50'
-                      }`}
+          <>
+            {/* Backdrop */}
+            <motion.div
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              onClick={() => setMobileOpen(false)}
+              className="fixed inset-0 bg-slate-900/40 backdrop-blur-sm z-[-1] md:hidden"
+            />
+            
+            {/* Drawer Content */}
+            <motion.div
+              initial={{ opacity: 0, y: -20, height: 0 }}
+              animate={{ opacity: 1, y: 0, height: 'auto' }}
+              exit={{ opacity: 0, y: -20, height: 0 }}
+              transition={{ type: 'spring', duration: 0.4, bounce: 0 }}
+              className="absolute top-full left-0 right-0 md:hidden bg-white border-b border-gray-200 shadow-2xl overflow-hidden z-50"
+            >
+              <div className="px-6 pt-4 pb-8 space-y-2">
+                {navItems.map((item) => {
+                  const isActive = checkActive(item.path);
+                  return (
+                    <Link
+                      key={item.name}
+                      to={item.path}
+                      onClick={() => setMobileOpen(false)}
+                      className={`flex items-center gap-4 px-4 py-4 rounded-2xl font-bold transition-all ${isActive
+                        ? 'bg-saas-accent/10 text-saas-accent'
+                        : 'text-gray-600 hover:bg-gray-50'
+                        }`}
+                    >
+                      <item.icon className={`w-5 h-5 ${isActive ? 'text-saas-accent' : 'text-gray-400'}`} />
+                      <span className="text-base">{item.name}</span>
+                    </Link>
+                  );
+                })}
+                
+                <div className="pt-6 grid grid-cols-1 gap-3">
+                  <a 
+                    href="https://restaurants.biosoftech.in/login"
+                    className="flex items-center justify-center w-full px-4 py-4 rounded-2xl border border-gray-200 text-gray-700 font-bold text-base active:bg-gray-50 transition-colors"
                   >
-                    <item.icon className="w-5 h-5" />
-                    {item.name}
-                  </Link>
-                );
-              })}
-              <div className="pt-4 grid grid-cols-2 gap-3">
-                <button className="px-4 py-3 rounded-xl border border-saas-border text-gray-900 font-bold text-sm active:bg-gray-50">
-                  Login
-                </button>
-                <button className="px-4 py-3 rounded-xl bg-saas-accent text-white font-bold text-sm shadow-lg active:scale-95">
-                  Register
-                </button>
+                    Login to Account
+                  </a>
+                  <a 
+                    href="https://restaurants.biosoftech.in/register"
+                    className="flex items-center justify-center w-full px-4 py-4 rounded-2xl bg-saas-accent text-white font-bold text-base shadow-lg shadow-saas-accent/20 active:scale-[0.98] transition-all"
+                  >
+                    Get Started Now
+                  </a>
+                </div>
               </div>
-            </div>
-          </motion.div>
+            </motion.div>
+          </>
         )}
       </AnimatePresence>
     </nav>

@@ -31,6 +31,7 @@ import {
 } from 'lucide-react';
 import tablesImg from "../assets/tables.png";
 
+
 const Table_Management = () => {
   const navigate = useNavigate();
 
@@ -81,11 +82,14 @@ const Table_Management = () => {
                 transition={{ delay: 0.2 }}
                 className="flex flex-wrap gap-5"
               >
-                <button className="px-10 py-5 bg-brand-600 hover:bg-brand-500 text-white font-black rounded-2xl shadow-2xl shadow-brand-600/30 transition-all hover:scale-105 active:scale-95 flex items-center gap-2">
-                  Get Started <ChevronRight className="w-5 h-5" />
-                </button>
-                <button className="px-10 py-5 bg-white/5 hover:bg-white/10 text-white border border-white/10 font-black rounded-2xl backdrop-blur-md transition-all">
-                  Book Demo
+                <a
+                  href="https://restaurants.biosoftech.in/register"
+                  className="bg-saas-accent hover:bg-saas-accent/90 text-white px-6 py-4.5 rounded-xl font-bold text-sm shadow-lg shadow-saas-accent/20 transition-all hover:scale-105 active:scale-95"
+                >
+                  Get Started for Free
+                </a>
+                <button onClick={() => navigate("/contact")} className="px-12 py-6 bg-white/10 hover:bg-white/20 text-white font-black rounded-[1.5rem] backdrop-blur-md border border-white/10 transition-all">
+                  Request a Demo
                 </button>
               </motion.div>
             </div>
@@ -313,46 +317,52 @@ const Table_Management = () => {
       </section>
 
       {/* 6. Testimonial Section */}
-      <section className="py-32 bg-white text-center">
-        <div className="min-w-4xl mx-auto px-6 space-y-12">
+      <section className="py-24 md:py-32 bg-white text-center">
+        <div className="max-w-5xl mx-auto px-6 space-y-10 md:space-y-12">
           <div className="flex justify-center gap-1">
-            {[...Array(5)].map((_, i) => <Star key={i} className="w-6 h-6 fill-brand-600 text-brand-600" />)}
+            {[...Array(5)].map((_, i) => <Star key={i} className="w-5 h-5 md:w-6 md:h-6 fill-brand-600 text-brand-600" />)}
           </div>
           <motion.blockquote
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="text-3xl md:text-5xl font-black text-slate-900 leading-[1.2]"
+            className="text-2xl sm:text-3xl md:text-5xl font-black text-slate-900 leading-[1.3] md:leading-[1.2]"
           >
             "Restaurant Mitra has completely transformed how we manage our rush hours. The visual layout is so intuitive that even new staff can master seating in minutes."
           </motion.blockquote>
           <div className="flex flex-col items-center gap-4">
-            <div className="w-20 h-20 rounded-full bg-slate-200 border-4 border-slate-50 overflow-hidden">
-              <div className="w-full h-full bg-gradient-to-br from-brand-500 to-brand-700 flex items-center justify-center text-white font-black text-2xl uppercase">RK</div>
+            <div className="w-16 h-16 md:w-20 md:h-20 rounded-full bg-slate-200 border-4 border-slate-50 overflow-hidden">
+              <div className="w-full h-full bg-gradient-to-br from-brand-500 to-brand-700 flex items-center justify-center text-white font-black text-xl md:text-2xl uppercase">RK</div>
             </div>
             <div>
-              <p className="text-xl font-black text-slate-900">Rohan Kapoor</p>
-              <p className="font-bold text-brand-700 uppercase tracking-widest text-xs">Director, Spice Garden</p>
+              <p className="text-lg md:text-xl font-black text-slate-900">Rohan Kapoor</p>
+              <p className="font-bold text-brand-700 uppercase tracking-widest text-[10px] md:text-xs">Director, Spice Garden</p>
             </div>
           </div>
         </div>
       </section>
 
       {/* 7. Call To Action Section */}
-      <section className="py-24 px-6 bg-slate-50">
-        <div className="min-w-5xl mx-auto bg-slate-950 rounded-[4rem] p-12 lg:p-24 text-center relative overflow-hidden shadow-2xl">
+      <section className="py-20 md:py-24 px-4 sm:px-6 bg-slate-50">
+        <div className="max-w-6xl mx-auto bg-slate-950 rounded-[2.5rem] md:rounded-[4rem] p-8 md:p-16 lg:p-24 text-center relative overflow-hidden shadow-2xl">
           <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-full bg-brand-700/10 blur-[120px]" />
 
-          <div className="relative z-10 space-y-10">
-            <h2 className="text-4xl md:text-6xl font-black text-white leading-tight">Start Managing Your <br />Tables Smarter</h2>
-            <p className="text-xl text-slate-400 max-w-2xl mx-auto font-medium">
+          <div className="relative z-10 space-y-8 md:space-y-10">
+            <h2 className="text-3xl md:text-6xl font-black text-white leading-tight">Start Managing Your <br className="hidden md:block" />Tables Smarter</h2>
+            <p className="text-lg md:text-xl text-slate-400 max-w-2xl mx-auto font-medium">
               Join hundreds of restaurants using Restaurant Mitra to optimize their floor operations and increase profitability.
             </p>
-            <div className="flex flex-wrap justify-center gap-6">
-              <button className="px-12 py-6 bg-brand-600 hover:bg-brand-500 text-white font-black rounded-[1.5rem] shadow-2xl shadow-brand-600/30 transition-all hover:scale-105 active:scale-95">
+            <div className="flex flex-col sm:flex-row justify-center gap-4 md:gap-6">
+              <a
+                href="https://restaurants.biosoftech.in/register"
+                className="w-full sm:w-auto bg-saas-accent hover:bg-saas-accent/90 text-white px-8 py-4 md:py-5 rounded-xl font-bold text-sm md:text-base shadow-lg shadow-saas-accent/20 transition-all hover:scale-105 active:scale-95"
+              >
                 Get Started for Free
-              </button>
-              <button className="px-12 py-6 bg-white/10 hover:bg-white/20 text-white font-black rounded-[1.5rem] backdrop-blur-md border border-white/10 transition-all">
+              </a>
+              <button 
+                onClick={() => navigate("/contact")} 
+                className="w-full sm:w-auto px-8 py-4 md:py-5 bg-white/10 hover:bg-white/20 text-white font-black rounded-xl md:rounded-[1.5rem] backdrop-blur-md border border-white/10 transition-all"
+              >
                 Request a Demo
               </button>
             </div>

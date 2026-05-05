@@ -1,6 +1,8 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 
 const InventoryStock = () => {
+  const navigate = useNavigate();
   return (
     <div className="bg-white text-slate-900">
 
@@ -17,10 +19,13 @@ const InventoryStock = () => {
             </p>
 
             <div className="mt-8 flex flex-col sm:flex-row gap-4">
-              <button className="px-6 py-3 bg-brand-600 text-white rounded-xl w-full sm:w-auto">
-                Start Free Trial
-              </button>
-              <button className="px-6 py-3 border rounded-xl w-full sm:w-auto">
+              <a
+                href="https://restaurants.biosoftech.in/register"
+                className="bg-saas-accent hover:bg-saas-accent/90 text-white px-6 py-3.5 rounded-xl font-bold text-sm shadow-lg shadow-saas-accent/20 transition-all hover:scale-105 active:scale-95"
+              >
+                Get Free Trial
+              </a>
+              <button onClick={() => navigate("/contact")} className="px-6 py-3 border rounded-xl w-full sm:w-auto">
                 Book Demo
               </button>
             </div>
@@ -74,85 +79,85 @@ const InventoryStock = () => {
 
       {/* FEATURES */}
       <section className="py-16 md:py-28 bg-slate-50">
-  <div className="max-w-7xl mx-auto px-4 sm:px-6">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6">
 
-    {/* Heading */}
-    <div className="text-center mb-16">
-      <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-slate-900">
-        Powerful <span className="text-brand-600">Inventory Features</span>
-      </h2>
-      <p className="text-slate-500 mt-4 max-w-2xl mx-auto px-2">
-        Everything you need to manage stock efficiently and avoid shortages.
-      </p>
-    </div>
-
-    {/* Cards */}
-    <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
-
-      {[
-        {
-          title: "Real-Time Tracking",
-          desc: "Monitor your stock levels instantly across all items."
-        },
-        {
-          title: "Low Stock Alerts",
-          desc: "Get notified before ingredients run out."
-        },
-        {
-          title: "Auto Updates",
-          desc: "Stock updates automatically with every order."
-        },
-        {
-          title: "Supplier Management",
-          desc: "Manage vendors and restocking with ease."
-        },
-        {
-          title: "Usage Insights",
-          desc: "Track which ingredients are used the most."
-        },
-        {
-          title: "Waste Reduction",
-          desc: "Reduce food wastage with smart tracking."
-        },
-      ].map((item, i) => (
-        <div
-          key={i}
-          className="group relative p-8 rounded-2xl bg-white border border-slate-100 shadow-sm hover:shadow-2xl hover:-translate-y-2 transition-all duration-500 overflow-hidden"
-        >
-
-          {/* Top Accent Bar */}
-          <div className="absolute top-0 left-0 w-full h-1 bg-brand-600 scale-x-0 group-hover:scale-x-100 transition-transform origin-left duration-500" />
-
-          {/* Icon */}
-          <div className="w-14 h-14 flex items-center justify-center rounded-xl bg-brand-50 text-brand-600 text-2xl mb-6 group-hover:bg-brand-600 group-hover:text-white transition-all duration-500">
-            ⚡
+          {/* Heading */}
+          <div className="text-center mb-16">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-slate-900">
+              Powerful <span className="text-brand-600">Inventory Features</span>
+            </h2>
+            <p className="text-slate-500 mt-4 max-w-2xl mx-auto px-2">
+              Everything you need to manage stock efficiently and avoid shortages.
+            </p>
           </div>
 
-          {/* Title */}
-          <h3 className="text-xl font-bold text-slate-900 mb-3 group-hover:text-brand-600 transition-colors">
-            {item.title}
-          </h3>
+          {/* Cards */}
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
 
-          {/* Description */}
-          <p className="text-slate-500 leading-relaxed text-sm sm:text-base">
-            {item.desc}
-          </p>
+            {[
+              {
+                title: "Real-Time Tracking",
+                desc: "Monitor your stock levels instantly across all items."
+              },
+              {
+                title: "Low Stock Alerts",
+                desc: "Get notified before ingredients run out."
+              },
+              {
+                title: "Auto Updates",
+                desc: "Stock updates automatically with every order."
+              },
+              {
+                title: "Supplier Management",
+                desc: "Manage vendors and restocking with ease."
+              },
+              {
+                title: "Usage Insights",
+                desc: "Track which ingredients are used the most."
+              },
+              {
+                title: "Waste Reduction",
+                desc: "Reduce food wastage with smart tracking."
+              },
+            ].map((item, i) => (
+              <div
+                key={i}
+                className="group relative p-8 rounded-2xl bg-white border border-slate-100 shadow-sm hover:shadow-2xl hover:-translate-y-2 transition-all duration-500 overflow-hidden"
+              >
 
-          {/* Learn More */}
-          <div className="mt-6 flex items-center gap-2 text-sm font-semibold text-slate-300 group-hover:text-brand-600 transition-colors">
-            <span>LEARN MORE</span>
-            <div className="h-px w-8 bg-slate-200 group-hover:w-12 group-hover:bg-brand-600 transition-all duration-500" />
+                {/* Top Accent Bar */}
+                <div className="absolute top-0 left-0 w-full h-1 bg-brand-600 scale-x-0 group-hover:scale-x-100 transition-transform origin-left duration-500" />
+
+                {/* Icon */}
+                <div className="w-14 h-14 flex items-center justify-center rounded-xl bg-brand-50 text-brand-600 text-2xl mb-6 group-hover:bg-brand-600 group-hover:text-white transition-all duration-500">
+                  ⚡
+                </div>
+
+                {/* Title */}
+                <h3 className="text-xl font-bold text-slate-900 mb-3 group-hover:text-brand-600 transition-colors">
+                  {item.title}
+                </h3>
+
+                {/* Description */}
+                <p className="text-slate-500 leading-relaxed text-sm sm:text-base">
+                  {item.desc}
+                </p>
+
+                {/* Learn More */}
+                <div className="mt-6 flex items-center gap-2 text-sm font-semibold text-slate-300 group-hover:text-brand-600 transition-colors">
+                  <span>LEARN MORE</span>
+                  <div className="h-px w-8 bg-slate-200 group-hover:w-12 group-hover:bg-brand-600 transition-all duration-500" />
+                </div>
+
+                {/* Glow effect */}
+                <div className="absolute inset-0 bg-brand-600/5 opacity-0 group-hover:opacity-100 transition duration-500 rounded-2xl" />
+
+              </div>
+            ))}
+
           </div>
-
-          {/* Glow effect */}
-          <div className="absolute inset-0 bg-brand-600/5 opacity-0 group-hover:opacity-100 transition duration-500 rounded-2xl" />
-
         </div>
-      ))}
-
-    </div>
-  </div>
-</section>
+      </section>
 
       {/* HOW IT WORKS */}
       <section className="py-16 md:py-24 text-center">
@@ -202,7 +207,7 @@ const InventoryStock = () => {
       <section className="py-16 md:py-24 text-center bg-brand-600 text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
           <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold">Never Run Out of Ingredients Again</h2>
-          <button className="mt-8 px-8 py-4 bg-white text-brand-600 rounded-xl font-bold hover:bg-brand-50 transition-colors shadow-lg">
+          <button onClick={() => navigate("/contact")} className="mt-8 px-8 py-4 bg-white text-brand-600 rounded-xl font-bold hover:bg-brand-50 transition-colors shadow-lg">
             Get Started
           </button>
         </div>

@@ -34,11 +34,14 @@ const BranchWiseDetails = () => {
 
               {/* CTA */}
               <div className="flex flex-col sm:flex-row gap-4 pt-4">
-                <button className="px-6 py-3 bg-brand-600 text-white rounded-xl shadow-lg hover:scale-105 transition w-full sm:w-auto">
+                <a
+                  href="https://restaurants.biosoftech.in/register"
+                  className="bg-saas-accent hover:bg-saas-accent/90 text-white px-6 py-3.5 rounded-xl font-bold text-sm shadow-lg shadow-saas-accent/20 transition-all hover:scale-105 active:scale-95"
+                >
                   Get Started
-                </button>
+                </a>
 
-                <button className="px-6 py-3 border border-slate-300 rounded-xl hover:border-brand-600 hover:text-brand-600 transition w-full sm:w-auto">
+                <button onClick={() => navigate("/contact")} className="px-6 py-3 border border-slate-300 rounded-xl hover:border-brand-600 hover:text-brand-600 transition w-full sm:w-auto">
                   Book Demo
                 </button>
               </div>

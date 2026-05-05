@@ -79,10 +79,13 @@ const Online_Ordering = () => {
                 transition={{ delay: 0.2 }}
                 className="flex flex-wrap justify-center lg:justify-start gap-4"
               >
-                <button className="px-6 md:px-8 py-3 md:py-4 bg-brand-600 hover:bg-brand-500 text-white font-black rounded-2xl shadow-xl shadow-brand-600/20 transition-all hover:scale-105 active:scale-95 text-sm md:text-base">
+                <a
+                  href="https://restaurants.biosoftech.in/register"
+                  className="bg-saas-accent hover:bg-saas-accent/90 text-white px-6 py-3.5 rounded-xl font-bold text-sm shadow-lg shadow-saas-accent/20 transition-all hover:scale-105 active:scale-95"
+                >
                   Start Accepting Orders
-                </button>
-                <button className="px-6 md:px-8 py-3 md:py-4 bg-white/5 hover:bg-white/10 text-white border border-white/10 font-black rounded-2xl backdrop-blur-md transition-all text-sm md:text-base">
+                </a>
+                <button onClick={() => navigate("/contact")} className="px-6 md:px-8 py-3 md:py-4 bg-white/5 hover:bg-white/10 text-white border border-white/10 font-black rounded-2xl backdrop-blur-md transition-all text-sm md:text-base">
                   Book a Demo
                 </button>
               </motion.div>
@@ -310,10 +313,13 @@ const Online_Ordering = () => {
               No commissions. No middlemen. Just pure growth.
             </p>
             <div className="flex flex-wrap justify-center gap-6 pt-4">
-              <button className="px-10 py-5 bg-brand-600 hover:bg-brand-500 text-white font-black rounded-2xl shadow-2xl shadow-brand-600/30 transition-all hover:scale-105">
+              <a
+                href="https://restaurants.biosoftech.in/register"
+                className="bg-saas-accent hover:bg-saas-accent/90 text-white px-6 py-3.5 rounded-xl font-bold text-sm shadow-lg shadow-saas-accent/20 transition-all hover:scale-105 active:scale-95"
+              >
                 Start Accepting Orders
-              </button>
-              <button className="px-10 py-5 bg-white/10 hover:bg-white/20 text-white font-black rounded-2xl backdrop-blur-md border border-white/10 transition-all">
+              </a>
+              <button onClick={() => navigate("/contact")} className="px-6 md:px-8 py-3 md:py-4 bg-white/5 hover:bg-white/10 text-white border border-white/10 font-black rounded-2xl backdrop-blur-md transition-all text-sm md:text-base">
                 Book a Demo
               </button>
             </div>

@@ -18,7 +18,10 @@ import AnalyticsReports from './Features/AnalyticsReport';
 import ScrollToTop from './components/ScrollToTop';
 
 import Pricing from './pages/Pricing';
-import SupportPage from './pages/SupportPage';
+
+import PrivacyPolicy from "./pages/PrivacyPolicy";
+import ContactPage from './pages/ContactPage';
+import TermsOfServicePage from './pages/TermsofServicePage';
 
 function App() {
   return (
@@ -29,7 +32,7 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/features" element={<FeaturesPage />} />
         <Route path="/pricing" element={<Pricing />} />
-        <Route path="/support" element={<SupportPage />} />
+        <Route path="/contact" element={<ContactPage />} />
         <Route path="/technical-guide/:category" element={<TechnicalGuide />} />
 
         {/* Feature Routes */}
@@ -40,6 +43,8 @@ function App() {
         <Route path="/analytics-reports" element={<AnalyticsReport />} />
         <Route path="/branch-details" element={<BranchWiseDetails />} />
         <Route path="/role-permissions" element={<RoleBasedPermission />} />
+        <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+        <Route path="/termofservice" element={<TermsOfServicePage />} />
       </Routes>
     </div>
 

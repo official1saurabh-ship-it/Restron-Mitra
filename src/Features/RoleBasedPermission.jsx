@@ -1,6 +1,9 @@
 import React from "react";
+import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 const RoleBasedPermission = () => {
+  const navigate = useNavigate();
   return (
     <div className="bg-white text-slate-900">
 
@@ -19,10 +22,13 @@ const RoleBasedPermission = () => {
             </p>
 
             <div className="flex gap-4 pt-4">
-              <button className="px-6 py-3 bg-brand-600 text-white rounded-xl">
+              <a
+                href="https://restaurants.biosoftech.in/register"
+                className="bg-saas-accent hover:bg-saas-accent/90 text-white px-6 py-3.5 rounded-xl font-bold text-sm shadow-lg shadow-saas-accent/20 transition-all hover:scale-105 active:scale-95"
+              >
                 Get Started
-              </button>
-              <button className="px-6 py-3 border rounded-xl">
+              </a>
+              <button onClick={() => navigate("/contact")} className="px-6 py-3 border rounded-xl">
                 Book Demo
               </button>
             </div>
@@ -185,7 +191,7 @@ const RoleBasedPermission = () => {
         <h2 className="text-4xl font-bold">
           Control Your Restaurant with Confidence
         </h2>
-        <button className="mt-6 px-6 py-3 bg-white text-brand-600 rounded-xl">
+        <button onClick={() => navigate("/contact")} className="mt-6 px-6 py-3 bg-white text-brand-600 rounded-xl">
           Get Started
         </button>
       </section>

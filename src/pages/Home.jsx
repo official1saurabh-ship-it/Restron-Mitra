@@ -2,6 +2,7 @@ import React, { useEffect, useLayoutEffect, useRef } from "react";
 import { Link } from "react-router-dom";
 import laptop from "../assets/laptop-mobile.png";
 import banner from "../assets/banner.png";
+import Banner from "../components/Banner";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import girl from "../assets/Girl.png";
@@ -12,8 +13,6 @@ import { motion } from "framer-motion";
 import { Zap } from 'lucide-react';
 import { useState } from "react";
 import emailjs from "@emailjs/browser";
-
-
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -64,21 +63,19 @@ const Home = () => {
     user_email: "",
     phone: "",
     message: ""
-  })
+  });
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-
 
     if (!formData.owner_name || !formData.user_email) {
       alert("Please fill required fields");
       return;
     }
 
-    console.log(formData); // check data
+    console.log(formData);
 
     try {
-      // 🔹 Admin mail
       await emailjs.send(
         "service_aucq40n",
         "template_syq0z0f",
@@ -86,18 +83,15 @@ const Home = () => {
         "_BvVYthvunvaw0XJF"
       );
 
-      // 🔹 User auto reply
       await emailjs.send(
         "service_aucq40n",
         "template_5kk87er",
-
         formData,
         "_BvVYthvunvaw0XJF"
       );
 
       alert("Form submitted successfully 🚀");
 
-      // reset form
       setFormData({
         owner_name: "",
         restaurant_name: "",
@@ -108,7 +102,6 @@ const Home = () => {
 
     } catch (error) {
       console.log("FULL ERROR:", error);
-      console.log("TEXT:", error.text);
       alert("Error sending email ❌");
     }
   };
@@ -116,43 +109,19 @@ const Home = () => {
   return (
     <div className="bg-white pt-20 relative overflow-hidden">
 
-      <main className="w-full min-h-[40vh] sm:h-[60vh] md:h-[80vh] lg:h-[90vh] relative overflow-hidden">
-        <img
-          src={banner}
-          alt="Cloud Illustration"
-          className="w-full h-full object-cover"
-        />
-      </main>
-
-      <div className="max-w-7xl mx-auto text-center space-y-6 pt-12 sm:pt-20 pb-16 px-6 relative z-10">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          className="text-3xl sm:text-5xl md:text-6xl lg:text-8xl font-black text-slate-900 leading-[1.1]"
-        >
-          The Operating System for <br className="hidden sm:block" />
-          <span className="text-brand-600">Modern Restaurants</span>
-        </motion.div>
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.1 }}
-          className="text-base sm:text-lg md:text-xl text-slate-500 font-medium max-w-3xl mx-auto px-4"
-        >
-          Ab orders, billing aur reports sab ek hi jagah — bina tension ke.
-        </motion.div>
-      </div>
-
-      <div className="flex justify-center px-4 sm:px-6 mb-16 sm:mb-24">
-        <img
-          src={laptop}
-          alt="Laptop Illustration"
-          className="w-full max-w-6xl h-auto object-contain origin-center will-change-transform"
-        />
-      </div>
+      {/* ==================== HERO BANNER ==================== */}
+      <Banner
+        image={laptop}
+        title={<>The Operating System for <br className="hidden sm:block" /> <span className="text-brand-400">Modern Restaurants</span></>}
+        subtitle="Ab orders, billing aur reports sab ek hi jagah — bina tension ke."
+        ctaText="Get Started for Free"
+        ctaLink="#contact"
+      />
 
 
-      <div className="max-w-7xl mx-auto flex flex-col lg:flex-row items-center gap-16 lg:gap-24 relative z-10 py-16 sm:py-24 px-6">
+
+      {/* Rest of your code remains exactly the same */}
+      <div className="max-w-full mx-auto px-4 sm:px-6 lg:px-12 flex flex-col lg:flex-row items-center gap-16 lg:gap-24 relative z-10 py-16 sm:py-24">
         <div className="lg:w-1/2 space-y-10 flex flex-col items-center lg:items-start text-center lg:text-left">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -238,7 +207,6 @@ const Home = () => {
 
         <div className="lg:w-1/2 relative w-full px-4 lg:px-0">
           <div className="relative w-full aspect-[4/5] sm:aspect-square lg:h-[800px] flex items-end justify-center overflow-hidden rounded-[2.5rem] sm:rounded-[4rem] bg-slate-50/50 border border-slate-100 shadow-inner">
-            {/* Background Image (Girl) */}
             <div className="absolute inset-0 animate-float">
               <img
                 src={girl}
@@ -248,7 +216,6 @@ const Home = () => {
               <div className="absolute inset-0 bg-gradient-to-t from-white/40 to-transparent" />
             </div>
 
-            {/* Floating UI Elements */}
             <motion.div
               animate={{ y: [0, -20, 0] }}
               transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
@@ -278,7 +245,7 @@ const Home = () => {
 
       {/* What Do We Do Section */}
       <section className="w-full py-20 sm:py-32 relative z-10 overflow-hidden bg-slate-50/50">
-        <div className="max-w-7xl mx-auto px-6">
+        <div className="max-w-full mx-auto px-4 sm:px-6 lg:px-12">
           <div className="text-center space-y-6 mb-16 sm:mb-24">
             <motion.h2
               initial={{ opacity: 0, y: 20 }}
@@ -301,48 +268,13 @@ const Home = () => {
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
             {[
-              {
-                icon: LayoutGrid,
-                title: "POS & Billing",
-                desc: "Fast, secure, and easy-to-use billing system that works offline too. Manage payments and invoices effortlessly.",
-                path: "/pos-billing"
-              },
-              {
-                icon: Smartphone,
-                title: "Online Ordering",
-                desc: "Integrated online ordering system to accept direct orders from customers, reducing third-party commissions.",
-                path: "/online-ordering"
-              },
-              {
-                icon: Coffee,
-                title: "Table Management",
-                desc: "Real-time table status, reservations, and floor management to optimize seating and reduce wait times.",
-                path: "/table-management"
-              },
-              {
-                icon: ClipboardList,
-                title: "Inventory & Stock",
-                desc: "Track ingredient levels, manage suppliers, and get auto-restock alerts to minimize wastage.",
-                path: "/inventory-stock"
-              },
-              {
-                icon: PieChart,
-                title: "Analytics & Reports",
-                desc: "Comprehensive business insights with visual charts to track performance, sales trends, and profitability.",
-                path: "/analytics-reports"
-              },
-              {
-                icon: ShieldCheck,
-                title: "Branch Wise Details",
-                desc: "Role-based access control, attendance tracking, and secure logs to keep your business operations safe.",
-                path: "/branch-details"
-              },
-              {
-                icon: ShieldCheck,
-                title: "Role Based Permission",
-                desc: "Decide who can manage billing, orders, and inventory. Give limited access to staff and full control to admins for smooth and secure operations.",
-                path: "/role-permissions"
-              }
+              { icon: LayoutGrid, title: "POS & Billing", desc: "Fast, secure, and easy-to-use billing system that works offline too. Manage payments and invoices effortlessly.", path: "/pos-billing" },
+              { icon: Smartphone, title: "Online Ordering", desc: "Integrated online ordering system to accept direct orders from customers, reducing third-party commissions.", path: "/online-ordering" },
+              { icon: Coffee, title: "Table Management", desc: "Real-time table status, reservations, and floor management to optimize seating and reduce wait times.", path: "/table-management" },
+              { icon: ClipboardList, title: "Inventory & Stock", desc: "Track ingredient levels, manage suppliers, and get auto-restock alerts to minimize wastage.", path: "/inventory-stock" },
+              { icon: PieChart, title: "Analytics & Reports", desc: "Comprehensive business insights with visual charts to track performance, sales trends, and profitability.", path: "/analytics-reports" },
+              { icon: ShieldCheck, title: "Branch Wise Details", desc: "Role-based access control, attendance tracking, and secure logs to keep your business operations safe.", path: "/branch-details" },
+              { icon: ShieldCheck, title: "Role Based Permission", desc: "Decide who can manage billing, orders, and inventory. Give limited access to staff and full control to admins for smooth and secure operations.", path: "/role-permissions" }
             ].map((item, i) => (
               <motion.div
                 key={i}
@@ -372,7 +304,7 @@ const Home = () => {
 
       {/* Solution Capabilities Section */}
       <section className="w-full py-20 sm:py-32 relative z-10 bg-white">
-        <div className="max-w-7xl mx-auto px-6">
+        <div className="max-w-full mx-auto px-4 sm:px-6 lg:px-12">
           <div className="text-center space-y-6 mb-16 sm:mb-24">
             <motion.div
               initial={{ opacity: 0, scale: 0.9 }}
@@ -405,42 +337,12 @@ const Home = () => {
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 sm:gap-12">
             {[
-              {
-                icon: Zap,
-                title: "Faster Operations",
-                desc: "Manage orders, billing, and tables without delays — even during peak hours.",
-                accent: "bg-brand-600"
-              },
-              {
-                icon: BarChart3,
-                title: "Real-Time Insights",
-                desc: "Track sales, performance, and customer trends instantly from one dashboard.",
-                accent: "bg-brand-600"
-              },
-              {
-                icon: ClipboardList,
-                title: "Error-Free Billing",
-                desc: "Automatic calculations ensure accurate bills every time, reducing manual errors.",
-                accent: "bg-brand-600"
-              },
-              {
-                icon: Users,
-                title: "Staff Coordination",
-                desc: "Sync orders between kitchen, billing, and staff seamlessly for better service.",
-                accent: "bg-brand-700"
-              },
-              {
-                icon: CreditCard,
-                title: "Flexible Payments",
-                desc: "Accept UPI, card, and cash — all integrated into one secure, reliable system.",
-                accent: "bg-green-600"
-              },
-              {
-                icon: TrendingUp,
-                title: "Grow Your Business",
-                desc: "Improve efficiency, serve more customers, and increase your monthly revenue.",
-                accent: "bg-rose-600"
-              }
+              { icon: Zap, title: "Faster Operations", desc: "Manage orders, billing, and tables without delays — even during peak hours.", accent: "bg-brand-600" },
+              { icon: BarChart3, title: "Real-Time Insights", desc: "Track sales, performance, and customer trends instantly from one dashboard.", accent: "bg-brand-600" },
+              { icon: ClipboardList, title: "Error-Free Billing", desc: "Automatic calculations ensure accurate bills every time, reducing manual errors.", accent: "bg-brand-600" },
+              { icon: Users, title: "Staff Coordination", desc: "Sync orders between kitchen, billing, and staff seamlessly for better service.", accent: "bg-brand-700" },
+              { icon: CreditCard, title: "Flexible Payments", desc: "Accept UPI, card, and cash — all integrated into one secure, reliable system.", accent: "bg-green-600" },
+              { icon: TrendingUp, title: "Grow Your Business", desc: "Improve efficiency, serve more customers, and increase your monthly revenue.", accent: "bg-rose-600" }
             ].map((item, i) => (
               <motion.div
                 key={i}
@@ -470,9 +372,8 @@ const Home = () => {
       </section>
 
       {/* Contact Form Section */}
-      <section className="w-full py-20 sm:py-32 relative z-10 px-6">
-        <div className="max-w-7xl mx-auto bg-slate-900 rounded-[3rem] sm:rounded-[4rem] overflow-hidden shadow-2xl flex flex-col lg:flex-row">
-          {/* Left Side: Contact Info */}
+      <section className="w-full py-20 sm:py-32 relative z-10 lg:px-12">
+        <div className="max-w-full mx-auto bg-slate-900 rounded-[3rem] sm:rounded-[4rem] overflow-hidden shadow-2xl flex flex-col lg:flex-row">
           <div className="lg:w-5/12 p-12 sm:p-20 lg:p-24 bg-gradient-to-br from-brand-600 to-brand-800 text-white flex flex-col justify-between text-center lg:text-left">
             <div>
               <motion.h2
@@ -510,7 +411,6 @@ const Home = () => {
             </div>
           </div>
 
-          {/* Right Side: Form */}
           <div className="lg:w-7/12 p-10 sm:p-20 lg:p-24">
             <form className="grid grid-cols-1 sm:grid-cols-2 gap-8" onSubmit={handleSubmit}>
               <div className="space-y-3">
