@@ -13,7 +13,6 @@ import Inventory_Stock from './Features/Inventory_Stock';
 import AnalyticsReport from './Features/AnalyticsReport';
 import BranchWiseDetails from './Features/BranchWiseDetails';
 import RoleBasedPermission from './Features/RoleBasedPermission';
-import AnalyticsReports from './Features/AnalyticsReport';
 
 import ScrollToTop from './components/ScrollToTop';
 
