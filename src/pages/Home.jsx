@@ -120,6 +120,67 @@ const Home = () => {
 
 
 
+
+
+      {/* What Do We Do Section */}
+      <section className="w-full py-20 sm:py-32 relative z-10 overflow-hidden bg-slate-50/50">
+        <div className="max-w-full mx-auto px-4 sm:px-6 lg:px-12">
+          <div className="text-center space-y-6 mb-16 sm:mb-24">
+            <motion.h2
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              className="text-3xl sm:text-5xl font-black text-slate-900"
+            >
+              What Do <span className="text-brand-600">We Do</span>
+            </motion.h2>
+            <motion.p
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.1 }}
+              className="text-lg sm:text-xl text-slate-500 font-medium max-w-3xl mx-auto"
+            >
+              Our ecosystem — empowering Restaurants through integrated solutions that simplify every aspect of your business.
+            </motion.p>
+          </div>
+
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+            {[
+              { icon: LayoutGrid, title: "POS & Billing", desc: "Fast, secure, and easy-to-use billing system that works offline too. Manage payments and invoices effortlessly.", path: "/pos-billing" },
+              { icon: Smartphone, title: "Online Ordering", desc: "Integrated online ordering system to accept direct orders from customers, reducing third-party commissions.", path: "/online-ordering" },
+              { icon: Coffee, title: "Table Management", desc: "Real-time table status, reservations, and floor management to optimize seating and reduce wait times.", path: "/table-management" },
+              { icon: ClipboardList, title: "Inventory & Stock", desc: "Track ingredient levels, manage suppliers, and get auto-restock alerts to minimize wastage.", path: "/inventory-stock" },
+              { icon: PieChart, title: "Analytics & Reports", desc: "Comprehensive business insights with visual charts to track performance, sales trends, and profitability.", path: "/analytics-reports" },
+              { icon: ShieldCheck, title: "Branch Wise Details", desc: "Role-based access control, attendance tracking, and secure logs to keep your business operations safe.", path: "/branch-details" },
+              { icon: ShieldCheck, title: "Role Based Permission", desc: "Decide who can manage billing, orders, and inventory. Give limited access to staff and full control to admins for smooth and secure operations.", path: "/role-permissions" }
+            ].map((item, i) => (
+              <motion.div
+                key={i}
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: i * 0.1 }}
+                className="w-full"
+              >
+                <Link
+                  to={item.path}
+                  className="group block p-10 h-full rounded-[2.5rem] bg-white border border-slate-100 hover:border-brand-200 shadow-sm hover:shadow-xl hover:shadow-brand-500/5 transition-all duration-500"
+                >
+                  <div className="w-16 h-16 rounded-2xl bg-brand-50 flex items-center justify-center mb-8 group-hover:bg-brand-600 transition-colors duration-500">
+                    <item.icon className="w-8 h-8 text-brand-600 group-hover:text-white transition-colors duration-500" />
+                  </div>
+                  <h3 className="text-2xl font-black text-slate-900 mb-4 group-hover:text-brand-700 transition-colors">{item.title}</h3>
+                  <p className="text-slate-500 text-base leading-relaxed font-medium">
+                    {item.desc}
+                  </p>
+                </Link>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* Rest of your code remains exactly the same */}
       <div className="max-w-full mx-auto px-4 sm:px-6 lg:px-12 flex flex-col lg:flex-row items-center gap-16 lg:gap-24 relative z-10 py-16 sm:py-24">
         <div className="lg:w-1/2 space-y-10 flex flex-col items-center lg:items-start text-center lg:text-left">
@@ -243,65 +304,6 @@ const Home = () => {
           </div>
         </div>
       </div>
-
-      {/* What Do We Do Section */}
-      <section className="w-full py-20 sm:py-32 relative z-10 overflow-hidden bg-slate-50/50">
-        <div className="max-w-full mx-auto px-4 sm:px-6 lg:px-12">
-          <div className="text-center space-y-6 mb-16 sm:mb-24">
-            <motion.h2
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              className="text-3xl sm:text-5xl font-black text-slate-900"
-            >
-              What Do <span className="text-brand-600">We Do</span>
-            </motion.h2>
-            <motion.p
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: 0.1 }}
-              className="text-lg sm:text-xl text-slate-500 font-medium max-w-3xl mx-auto"
-            >
-              Our ecosystem — empowering Restaurants through integrated solutions that simplify every aspect of your business.
-            </motion.p>
-          </div>
-
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-            {[
-              { icon: LayoutGrid, title: "POS & Billing", desc: "Fast, secure, and easy-to-use billing system that works offline too. Manage payments and invoices effortlessly.", path: "/pos-billing" },
-              { icon: Smartphone, title: "Online Ordering", desc: "Integrated online ordering system to accept direct orders from customers, reducing third-party commissions.", path: "/online-ordering" },
-              { icon: Coffee, title: "Table Management", desc: "Real-time table status, reservations, and floor management to optimize seating and reduce wait times.", path: "/table-management" },
-              { icon: ClipboardList, title: "Inventory & Stock", desc: "Track ingredient levels, manage suppliers, and get auto-restock alerts to minimize wastage.", path: "/inventory-stock" },
-              { icon: PieChart, title: "Analytics & Reports", desc: "Comprehensive business insights with visual charts to track performance, sales trends, and profitability.", path: "/analytics-reports" },
-              { icon: ShieldCheck, title: "Branch Wise Details", desc: "Role-based access control, attendance tracking, and secure logs to keep your business operations safe.", path: "/branch-details" },
-              { icon: ShieldCheck, title: "Role Based Permission", desc: "Decide who can manage billing, orders, and inventory. Give limited access to staff and full control to admins for smooth and secure operations.", path: "/role-permissions" }
-            ].map((item, i) => (
-              <motion.div
-                key={i}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: i * 0.1 }}
-                className="w-full"
-              >
-                <Link
-                  to={item.path}
-                  className="group block p-10 h-full rounded-[2.5rem] bg-white border border-slate-100 hover:border-brand-200 shadow-sm hover:shadow-xl hover:shadow-brand-500/5 transition-all duration-500"
-                >
-                  <div className="w-16 h-16 rounded-2xl bg-brand-50 flex items-center justify-center mb-8 group-hover:bg-brand-600 transition-colors duration-500">
-                    <item.icon className="w-8 h-8 text-brand-600 group-hover:text-white transition-colors duration-500" />
-                  </div>
-                  <h3 className="text-2xl font-black text-slate-900 mb-4 group-hover:text-brand-700 transition-colors">{item.title}</h3>
-                  <p className="text-slate-500 text-base leading-relaxed font-medium">
-                    {item.desc}
-                  </p>
-                </Link>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
 
       {/* Solution Capabilities Section */}
       <section className="w-full py-20 sm:py-32 relative z-10 bg-white">
