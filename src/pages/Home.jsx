@@ -380,7 +380,7 @@ const Home = () => {
       {/* Contact Form Section */}
       <section className="w-full py-20 sm:py-32 relative z-10 lg:px-12">
         <div className="max-w-full mx-auto bg-slate-900 rounded-[3rem] sm:rounded-[4rem] overflow-hidden shadow-2xl flex flex-col lg:flex-row">
-          <div className="lg:w-5/12 p-12 sm:p-20 lg:p-24 bg-gradient-to-br from-brand-600 to-brand-800 text-white flex flex-col justify-between text-center lg:text-left">
+          <div className="lg:w-5/12 p-12 sm:p-20 lg:p-24 bg-slate-900 text-white flex flex-col justify-between text-center lg:text-left">
             <div>
               <motion.h2
                 initial={{ opacity: 0, y: 20 }}
