@@ -181,6 +181,78 @@ const Home = () => {
         </div>
       </section>
 
+
+
+      {/* Solution Capabilities Section */}
+      <section className="w-full py-20 sm:py-32 relative z-10 bg-white">
+        <div className="max-w-full mx-auto px-4 sm:px-6 lg:px-12">
+          <div className="text-center space-y-6 mb-16 sm:mb-24">
+            <motion.div
+              initial={{ opacity: 0, scale: 0.9 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              viewport={{ once: true }}
+              className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-brand-50 text-brand-600 text-xs font-bold uppercase tracking-widest"
+            >
+              <Zap className="w-4 h-4 fill-brand-600" />
+              <span>Engineered for Excellence</span>
+            </motion.div>
+            <motion.h2
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              className="text-3xl sm:text-5xl font-black text-slate-900 leading-tight"
+            >
+              What Our Solutions <br className="hidden sm:block" />
+              <span className="text-brand-600">Can Do For You</span>
+            </motion.h2>
+            <motion.p
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.1 }}
+              className="text-lg sm:text-xl text-slate-500 font-medium max-w-3xl mx-auto"
+            >
+              Streamline your workflow and maximize profits with tools built specifically for the modern food industry.
+            </motion.p>
+          </div>
+
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 sm:gap-12">
+            {[
+              { icon: Zap, title: "Faster Operations", desc: "Manage orders, billing, and tables without delays — even during peak hours.", accent: "bg-brand-600" },
+              { icon: BarChart3, title: "Real-Time Insights", desc: "Track sales, performance, and customer trends instantly from one dashboard.", accent: "bg-brand-600" },
+              { icon: ClipboardList, title: "Error-Free Billing", desc: "Automatic calculations ensure accurate bills every time, reducing manual errors.", accent: "bg-brand-600" },
+              { icon: Users, title: "Staff Coordination", desc: "Sync orders between kitchen, billing, and staff seamlessly for better service.", accent: "bg-brand-700" },
+              { icon: CreditCard, title: "Flexible Payments", desc: "Accept UPI, card, and cash — all integrated into one secure, reliable system.", accent: "bg-green-600" },
+              { icon: TrendingUp, title: "Grow Your Business", desc: "Improve efficiency, serve more customers, and increase your monthly revenue.", accent: "bg-rose-600" }
+            ].map((item, i) => (
+              <motion.div
+                key={i}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: i * 0.1 }}
+                className="group p-10 sm:p-14 rounded-[3rem] bg-white border border-slate-100 shadow-sm hover:shadow-2xl hover:shadow-slate-200/50 transition-all duration-500 relative overflow-hidden"
+              >
+                <div className={`absolute top-0 left-0 w-full h-1.5 ${item.accent} transform origin-left scale-x-0 group-hover:scale-x-100 transition-transform duration-500`} />
+
+                <div className="w-16 h-16 rounded-2xl bg-slate-50 flex items-center justify-center mb-10 group-hover:scale-110 group-hover:bg-slate-900 transition-all duration-500">
+                  <item.icon className={`w-8 h-8 text-slate-600 group-hover:text-white transition-colors duration-500`} />
+                </div>
+
+                <h3 className="text-2xl sm:text-3xl font-black text-slate-900 mb-6 group-hover:text-brand-600 transition-colors">
+                  {item.title}
+                </h3>
+
+                <p className="text-slate-500 text-lg leading-relaxed font-medium">
+                  {item.desc}
+                </p>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+
       {/* Rest of your code remains exactly the same */}
       <div className="max-w-full mx-auto px-4 sm:px-6 lg:px-12 flex flex-col lg:flex-row items-center gap-16 lg:gap-24 relative z-10 py-16 sm:py-24">
         <div className="lg:w-1/2 space-y-10 flex flex-col items-center lg:items-start text-center lg:text-left">
@@ -304,75 +376,6 @@ const Home = () => {
           </div>
         </div>
       </div>
-
-      {/* Solution Capabilities Section */}
-      <section className="w-full py-20 sm:py-32 relative z-10 bg-white">
-        <div className="max-w-full mx-auto px-4 sm:px-6 lg:px-12">
-          <div className="text-center space-y-6 mb-16 sm:mb-24">
-            <motion.div
-              initial={{ opacity: 0, scale: 0.9 }}
-              whileInView={{ opacity: 1, scale: 1 }}
-              viewport={{ once: true }}
-              className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-brand-50 text-brand-600 text-xs font-bold uppercase tracking-widest"
-            >
-              <Zap className="w-4 h-4 fill-brand-600" />
-              <span>Engineered for Excellence</span>
-            </motion.div>
-            <motion.h2
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              className="text-3xl sm:text-5xl font-black text-slate-900 leading-tight"
-            >
-              What Our Solutions <br className="hidden sm:block" />
-              <span className="text-brand-600">Can Do For You</span>
-            </motion.h2>
-            <motion.p
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: 0.1 }}
-              className="text-lg sm:text-xl text-slate-500 font-medium max-w-3xl mx-auto"
-            >
-              Streamline your workflow and maximize profits with tools built specifically for the modern food industry.
-            </motion.p>
-          </div>
-
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 sm:gap-12">
-            {[
-              { icon: Zap, title: "Faster Operations", desc: "Manage orders, billing, and tables without delays — even during peak hours.", accent: "bg-brand-600" },
-              { icon: BarChart3, title: "Real-Time Insights", desc: "Track sales, performance, and customer trends instantly from one dashboard.", accent: "bg-brand-600" },
-              { icon: ClipboardList, title: "Error-Free Billing", desc: "Automatic calculations ensure accurate bills every time, reducing manual errors.", accent: "bg-brand-600" },
-              { icon: Users, title: "Staff Coordination", desc: "Sync orders between kitchen, billing, and staff seamlessly for better service.", accent: "bg-brand-700" },
-              { icon: CreditCard, title: "Flexible Payments", desc: "Accept UPI, card, and cash — all integrated into one secure, reliable system.", accent: "bg-green-600" },
-              { icon: TrendingUp, title: "Grow Your Business", desc: "Improve efficiency, serve more customers, and increase your monthly revenue.", accent: "bg-rose-600" }
-            ].map((item, i) => (
-              <motion.div
-                key={i}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: i * 0.1 }}
-                className="group p-10 sm:p-14 rounded-[3rem] bg-white border border-slate-100 shadow-sm hover:shadow-2xl hover:shadow-slate-200/50 transition-all duration-500 relative overflow-hidden"
-              >
-                <div className={`absolute top-0 left-0 w-full h-1.5 ${item.accent} transform origin-left scale-x-0 group-hover:scale-x-100 transition-transform duration-500`} />
-
-                <div className="w-16 h-16 rounded-2xl bg-slate-50 flex items-center justify-center mb-10 group-hover:scale-110 group-hover:bg-slate-900 transition-all duration-500">
-                  <item.icon className={`w-8 h-8 text-slate-600 group-hover:text-white transition-colors duration-500`} />
-                </div>
-
-                <h3 className="text-2xl sm:text-3xl font-black text-slate-900 mb-6 group-hover:text-brand-600 transition-colors">
-                  {item.title}
-                </h3>
-
-                <p className="text-slate-500 text-lg leading-relaxed font-medium">
-                  {item.desc}
-                </p>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
 
       {/* Contact Form Section */}
       <section className="w-full py-20 sm:py-32 relative z-10 lg:px-12">
