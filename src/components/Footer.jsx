@@ -69,7 +69,7 @@ const Footer = () => {
 
         <div className="pt-12 border-t border-slate-100 flex flex-col sm:flex-row justify-between items-center gap-6 text-center sm:text-left">
           <p className="text-slate-400 text-sm font-bold">
-            © {new Date().getFullYear()} Restaurant Mitra. All rights reserved.
+            © {new Date().getFullYear()} Restron Mitra. All rights reserved.
           </p>
           <div className="flex gap-4 sm:gap-8 text-sm font-bold text-slate-400">
             <span onClick={() => navigate("/privacy-policy")} className="hover:text-slate-900 cursor-pointer transition-colors">Privacy Policy</span>

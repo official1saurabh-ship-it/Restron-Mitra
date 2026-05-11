@@ -225,7 +225,7 @@ const Pos_Billing = () => {
               <h2 className="text-sm font-black text-brand-600 uppercase tracking-[0.3em]">Device Agnostic</h2>
               <h3 className="text-3xl md:text-5xl font-black text-slate-900 leading-tight">Run Your Entire <br />Business on Any Hardware</h3>
               <p className="text-lg text-slate-600 font-medium leading-relaxed">
-                Whether you prefer a traditional POS terminal, a sleek laptop, or an Android mobile device, Restaurant Mitra adapts perfectly. Our system works seamlessly with all thermal printers and barcode scanners.
+                Whether you prefer a traditional POS terminal, a sleek laptop, or an Android mobile device, Restron Mitra adapts perfectly. Our system works seamlessly with all thermal printers and barcode scanners.
               </p>
               <div className="flex gap-8">
                 <div className="flex flex-col items-center gap-2">
@@ -254,7 +254,7 @@ const Pos_Billing = () => {
       {/* Benefits Section */}
       <section className="py-24 bg-slate-50 border-y border-slate-100">
         <div className="max-w-7xl mx-auto px-6 text-center">
-          <h2 className="text-3xl md:text-5xl font-black text-slate-900 mb-16">The Restaurant Mitra Advantage</h2>
+          <h2 className="text-3xl md:text-5xl font-black text-slate-900 mb-16">The Restron Mitra Advantage</h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {[
               { icon: Zap, val: "40%", label: "Faster Checkout Speed", desc: "Proprietary quick-search engine reduces bill time by nearly half." },

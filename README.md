@@ -1,6 +1,6 @@
-# React + Vite
+# Restron Mitra
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This is the landing page for Restron Mitra, an operating system for modern restaurants.
 
 Currently, two official plugins are available:
 

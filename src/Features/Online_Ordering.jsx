@@ -180,7 +180,7 @@ const Online_Ordering = () => {
               { icon: Edit3, title: "Menu & Price Control", desc: "Update items, descriptions, and prices instantly across all your digital channels." },
               { icon: Users, title: "Customer Data Collection", desc: "Build your own database. Track preferences, visit frequency, and lifetime value." },
               { icon: Truck, title: "Order Tracking", desc: "Keep customers informed with real-time status updates from prep to delivery." },
-              { icon: Zap, title: "Integration with POS system", desc: "Orders flow directly into your Restaurant Mitra POS—no manual entry needed." }
+              { icon: Zap, title: "Integration with POS system", desc: "Orders flow directly into your Restron Mitra POS—no manual entry needed." }
             ].map((feat, i) => (
               <div key={i} className="p-10 rounded-[2.5rem] bg-white border border-slate-100 hover:border-brand-200 hover:shadow-xl hover:shadow-brand-600/5 transition-all duration-500 group">
                 <div className="w-14 h-14 bg-brand-50 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-brand-600 transition-colors duration-500">
@@ -288,7 +288,7 @@ const Online_Ordering = () => {
             {[1, 2, 3, 4, 5].map(i => <Star key={i} className="w-6 h-6 fill-brand-600 text-brand-600" />)}
           </div>
           <p className="text-2xl md:text-3xl font-black text-slate-900 leading-tight">
-            "Restaurant Mitra gave us the freedom to serve our customers directly. Our profit margins have improved by 25% since we stopped paying commissions."
+            "Restron Mitra gave us the freedom to serve our customers directly. Our profit margins have improved by 25% since we stopped paying commissions."
           </p>
           <div className="flex items-center justify-center gap-4">
             <div className="w-12 h-12 rounded-full bg-slate-200" />

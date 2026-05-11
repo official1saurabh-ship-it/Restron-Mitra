@@ -191,7 +191,7 @@ const Home = () => {
           >
             <Quote className="absolute -right-4 -top-4 w-32 h-32 text-brand-50 rotate-12" />
             <p className="relative z-10 text-lg sm:text-xl font-medium italic leading-relaxed text-slate-700">
-              "Restaurant Mitra has completely transformed the way we manage our restaurant. It's smart, simple, and super effective!"
+              "Restron Mitra has completely transformed the way we manage our restaurant. It's smart, simple, and super effective!"
             </p>
             <div className="mt-8 flex items-center justify-center lg:justify-start gap-4">
               <div className="w-14 h-14 rounded-full bg-gradient-to-tr from-brand-100 to-pink-100 flex items-center justify-center font-bold border border-white shadow-inner text-brand-700 text-lg">

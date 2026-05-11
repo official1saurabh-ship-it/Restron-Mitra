@@ -103,7 +103,7 @@ const Table_Management = () => {
               <div className="relative z-10 p-2 bg-white/5 rounded-[2.5rem] border border-white/10 backdrop-blur-3xl shadow-2xl">
                 <img
                   src={tablesImg}
-                  alt="Restaurant Mitra Dashboard"
+                  alt="Restron Mitra Dashboard"
                   className="w-full h-auto rounded-[2rem] shadow-inner"
                 />
               </div>
@@ -211,7 +211,7 @@ const Table_Management = () => {
             <div className="lg:w-1/2 space-y-8">
               <h3 className="text-4xl lg:text-5xl font-black text-slate-900 leading-tight">Intelligent Waitlist Control</h3>
               <p className="text-xl text-slate-500 font-medium leading-relaxed">
-                Take the guesswork out of wait times. Restaurant Mitra uses historical data and real-time turnover speeds to provide accurate quotes to your guests, keeping them informed and happy.
+                Take the guesswork out of wait times. Restron Mitra uses historical data and real-time turnover speeds to provide accurate quotes to your guests, keeping them informed and happy.
               </p>
               <div className="p-8 bg-slate-900 rounded-[2rem] border border-white/10 space-y-6">
                 <div className="flex justify-between items-center text-white">
@@ -328,7 +328,7 @@ const Table_Management = () => {
             viewport={{ once: true }}
             className="text-2xl sm:text-3xl md:text-5xl font-black text-slate-900 leading-[1.3] md:leading-[1.2]"
           >
-            "Restaurant Mitra has completely transformed how we manage our rush hours. The visual layout is so intuitive that even new staff can master seating in minutes."
+            "Restron Mitra has completely transformed how we manage our rush hours. The visual layout is so intuitive that even new staff can master seating in minutes."
           </motion.blockquote>
           <div className="flex flex-col items-center gap-4">
             <div className="w-16 h-16 md:w-20 md:h-20 rounded-full bg-slate-200 border-4 border-slate-50 overflow-hidden">
@@ -350,7 +350,7 @@ const Table_Management = () => {
           <div className="relative z-10 space-y-8 md:space-y-10">
             <h2 className="text-3xl md:text-6xl font-black text-white leading-tight">Start Managing Your <br className="hidden md:block" />Tables Smarter</h2>
             <p className="text-lg md:text-xl text-slate-400 max-w-2xl mx-auto font-medium">
-              Join hundreds of restaurants using Restaurant Mitra to optimize their floor operations and increase profitability.
+              Join hundreds of restaurants using Restron Mitra to optimize their floor operations and increase profitability.
             </p>
             <div className="flex flex-col sm:flex-row justify-center gap-4 md:gap-6">
               <a
