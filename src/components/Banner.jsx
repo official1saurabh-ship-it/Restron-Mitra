@@ -19,8 +19,8 @@ const Button = ({ children, variant = 'primary', className = '' }) => {
 const Banner = () => {
     const navigate = useNavigate();
     return (
-        <div className="relative min-h-[40vh] sm:min-h-[85vh] lg:h-[95vh] overflow-hidden flex items-center bg-white">
-            <main className="mx-auto px-2 sm:px-6 lg:px-12 py-4 sm:py-10 lg:py-0 w-full">
+        <div className="relative pt-16 overflow-hidden flex items-center bg-white">
+            <main className="mx-auto px-2 sm:px-6 lg:px-12  w-full">
                 <div className="flex flex-col items-center justify-center text-center">
 
                     {/* Content */}
