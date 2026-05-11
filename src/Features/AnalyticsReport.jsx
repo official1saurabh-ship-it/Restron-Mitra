@@ -10,26 +10,30 @@ const AnalyticsReports = () => {
     <div className="bg-white text-slate-900">
 
       {/* HERO */}
-      <section className="pt-32 md:pt-40 pb-20 bg-gradient-to-br from-brand-50 to-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 grid md:grid-cols-2 gap-12 items-center">
-          <button
-            onClick={() => navigate(-1)}
-            className="absolute right-4 sm:right-6 top-24 sm:top-28 p-3 rounded-full bg-slate-50 hover:bg-brand-600 hover:text-white text-slate-600 transition-all duration-300 shadow-sm hover:shadow-lg group z-10"
-          >
-            <ArrowLeft className="w-6 h-6 group-hover:-translate-x-1 transition-transform" />
-          </button>
+      <section className="relative pt-32 pb-20 lg:pt-48 lg:pb-32 bg-slate-950 overflow-hidden">
+        {/* Decorative Background */}
+        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full h-full overflow-hidden pointer-events-none">
+          <div className="absolute top-[-10%] left-[-10%] w-[40%] h-[60%] bg-brand-700/20 blur-[120px] rounded-full" />
+          <div className="absolute bottom-[-10%] right-[-10%] w-[40%] h-[60%] bg-brand-600/10 blur-[120px] rounded-full" />
+        </div>
 
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 grid md:grid-cols-2 gap-12 items-center relative z-10">
           <div>
-            <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold leading-tight">
+            <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold leading-tight text-white">
               Smart <span className="text-brand-600">Analytics & Reports</span>
             </h1>
-            <p className="mt-6 text-slate-500 text-lg">
+            <p className="mt-6 text-slate-400 text-lg">
               Get real-time insights into your sales, performance, and customer trends to grow your restaurant.
             </p>
 
             <div className="mt-8 flex flex-wrap gap-4">
-
-              <button onClick={() => navigate("/contact")} className="px-6 py-3 border rounded-xl w-full sm:w-auto">
+              <a
+                href="https://restaurants.biosoftech.in/register"
+                className="bg-saas-accent hover:bg-saas-accent/90 text-white px-6 py-3.5 rounded-xl font-bold text-sm shadow-lg shadow-saas-accent/20 transition-all hover:scale-105 active:scale-95"
+              >
+                Get Started
+              </a>
+              <button onClick={() => navigate("/contact")} className="px-6 py-3 bg-white/5 hover:bg-white/10 text-white border border-white/10 rounded-xl backdrop-blur-md transition-all">
                 Book Demo
               </button>
             </div>

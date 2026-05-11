@@ -123,6 +123,7 @@ const Home = () => {
       {/* Rest of your code remains exactly the same */}
       <div className="max-w-full mx-auto px-4 sm:px-6 lg:px-12 flex flex-col lg:flex-row items-center gap-16 lg:gap-24 relative z-10 py-16 sm:py-24">
         <div className="lg:w-1/2 space-y-10 flex flex-col items-center lg:items-start text-center lg:text-left">
+
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}

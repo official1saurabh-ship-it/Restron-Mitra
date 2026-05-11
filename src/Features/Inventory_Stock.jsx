@@ -7,14 +7,20 @@ const InventoryStock = () => {
     <div className="bg-white text-slate-900">
 
       {/* HERO */}
-      <section className="py-12 md:py-24 bg-gradient-to-br from-brand-50 to-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 grid md:grid-cols-2 gap-12 items-center">
+      <section className="relative pt-32 pb-20 lg:pt-48 lg:pb-32 bg-slate-950 overflow-hidden">
+        {/* Decorative Background */}
+        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full h-full overflow-hidden pointer-events-none">
+          <div className="absolute top-[-10%] left-[-10%] w-[40%] h-[60%] bg-brand-700/20 blur-[120px] rounded-full" />
+          <div className="absolute bottom-[-10%] right-[-10%] w-[40%] h-[60%] bg-brand-600/10 blur-[120px] rounded-full" />
+        </div>
+
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 grid md:grid-cols-2 gap-12 items-center relative z-10">
 
           <div>
-            <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold leading-tight">
+            <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold leading-tight text-white">
               Smart <span className="text-brand-600">Inventory & Stock</span> Management
             </h1>
-            <p className="mt-6 text-slate-500 text-lg">
+            <p className="mt-6 text-slate-400 text-lg">
               Track ingredients, avoid shortages, and manage your kitchen inventory in real time.
             </p>
 
@@ -25,7 +31,7 @@ const InventoryStock = () => {
               >
                 Get Free Trial
               </a>
-              <button onClick={() => navigate("/contact")} className="px-6 py-3 border rounded-xl w-full sm:w-auto">
+              <button onClick={() => navigate("/contact")} className="px-6 py-3 bg-white/5 hover:bg-white/10 text-white border border-white/10 rounded-xl backdrop-blur-md transition-all w-full sm:w-auto">
                 Book Demo
               </button>
             </div>

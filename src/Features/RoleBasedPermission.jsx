@@ -8,38 +8,44 @@ const RoleBasedPermission = () => {
     <div className="bg-white text-slate-900">
 
       {/* HERO */}
-      <section className="py-24 bg-gradient-to-br from-brand-50 via-white to-slate-50">
-        <div className="max-w-7xl mx-auto px-6 grid lg:grid-cols-2 gap-12 items-center">
+      <section className="relative pt-32 pb-20 lg:pt-48 lg:pb-32 bg-slate-950 overflow-hidden">
+        {/* Decorative Background */}
+        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full h-full overflow-hidden pointer-events-none">
+          <div className="absolute top-[-10%] left-[-10%] w-[40%] h-[60%] bg-brand-700/20 blur-[120px] rounded-full" />
+          <div className="absolute bottom-[-10%] right-[-10%] w-[40%] h-[60%] bg-brand-600/10 blur-[120px] rounded-full" />
+        </div>
+
+        <div className="max-w-7xl mx-auto px-6 grid lg:grid-cols-2 gap-12 items-center relative z-10">
 
           <div className="space-y-6">
-            <h1 className="text-5xl md:text-6xl font-bold leading-tight">
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight text-white">
               Secure Access with <br />
               <span className="text-brand-600">Role-Based Permissions</span>
             </h1>
 
-            <p className="text-slate-500 text-lg">
+            <p className="text-slate-400 text-lg">
               Control who can access what — from billing to reports — and keep your restaurant operations secure and organized.
             </p>
 
-            <div className="flex gap-4 pt-4">
+            <div className="flex flex-col sm:flex-row gap-4 pt-4">
               <a
                 href="https://restaurants.biosoftech.in/register"
                 className="bg-saas-accent hover:bg-saas-accent/90 text-white px-6 py-3.5 rounded-xl font-bold text-sm shadow-lg shadow-saas-accent/20 transition-all hover:scale-105 active:scale-95"
               >
                 Get Started
               </a>
-              <button onClick={() => navigate("/contact")} className="px-6 py-3 border rounded-xl">
+              <button onClick={() => navigate("/contact")} className="px-6 py-3 bg-white/5 hover:bg-white/10 text-white border border-white/10 rounded-xl backdrop-blur-md transition-all">
                 Book Demo
               </button>
             </div>
 
-            <div className="flex gap-8 pt-6 text-sm text-slate-500">
+            <div className="flex gap-8 pt-6 text-sm text-slate-400">
               <div>
-                <p className="text-xl font-bold text-slate-900">100%</p>
+                <p className="text-xl font-bold text-white">100%</p>
                 <p>Secure Access</p>
               </div>
               <div>
-                <p className="text-xl font-bold text-slate-900">Role-Based</p>
+                <p className="text-xl font-bold text-white">Role-Based</p>
                 <p>Control System</p>
               </div>
             </div>

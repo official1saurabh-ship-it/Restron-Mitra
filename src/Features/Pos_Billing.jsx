@@ -35,14 +35,6 @@ const Pos_Billing = () => {
         </div>
 
         <div className="max-w-7xl mx-auto px-6 relative z-10">
-          <button
-            onClick={() => navigate(-1)}
-            className="mb-8 inline-flex items-center gap-2 text-slate-400 hover:text-brand-600 transition-colors group"
-          >
-            <ArrowLeft className="w-5 h-5 group-hover:-translate-x-1 transition-transform" />
-            <span className="font-bold text-sm uppercase tracking-widest">Back to Home</span>
-          </button>
-
           <div className="flex flex-col lg:flex-row items-center gap-12 lg:gap-16">
             <div className="lg:w-1/2 space-y-6 md:space-y-8 text-center lg:text-left">
               <motion.div

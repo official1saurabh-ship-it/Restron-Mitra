@@ -6,29 +6,26 @@ import { useNavigate } from 'react-router-dom';
 const BranchWiseDetails = () => {
   const navigate = useNavigate();
   return (
-    <div className="min-h-screen bg-white pt-16 md:pt-24">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 py-8 md:py-12 relative">
-        <button
-          onClick={() => navigate(-1)}
-          className="absolute right-4 sm:right-6 top-4 sm:top-12 p-3 rounded-full bg-slate-50 hover:bg-brand-600 hover:text-white text-slate-600 transition-all duration-300 shadow-sm hover:shadow-lg group z-10"
-        >
-          <ArrowLeft className="w-6 h-6 group-hover:-translate-x-1 transition-transform" />
-        </button>
+    <div className="min-h-screen bg-white">
+      <div className="relative">
+        <section className="relative pt-32 pb-20 lg:pt-48 lg:pb-32 bg-slate-950 overflow-hidden">
+          {/* Decorative Background */}
+          <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full h-full overflow-hidden pointer-events-none">
+            <div className="absolute top-[-10%] left-[-10%] w-[40%] h-[60%] bg-brand-700/20 blur-[120px] rounded-full" />
+            <div className="absolute bottom-[-10%] right-[-10%] w-[40%] h-[60%] bg-brand-600/10 blur-[120px] rounded-full" />
+          </div>
 
-
-
-        <section className="py-12 md:py-24 bg-gradient-to-br from-brand-50 via-white to-slate-50">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 grid lg:grid-cols-2 gap-12 items-center">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 grid lg:grid-cols-2 gap-12 items-center relative z-10">
 
             {/* LEFT CONTENT */}
             <div className="space-y-6">
 
-              <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold leading-tight text-slate-900">
+              <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold leading-tight text-white">
                 Manage All Your <br className="hidden sm:block" />
                 <span className="text-brand-600">Branches in One Place</span>
               </h1>
 
-              <p className="text-slate-500 text-lg max-w-xl">
+              <p className="text-slate-400 text-lg max-w-xl">
                 Track sales, monitor performance, and control operations across all your restaurant branches — all from a single dashboard.
               </p>
 
@@ -41,25 +38,25 @@ const BranchWiseDetails = () => {
                   Get Started
                 </a>
 
-                <button onClick={() => navigate("/contact")} className="px-6 py-3 border border-slate-300 rounded-xl hover:border-brand-600 hover:text-brand-600 transition w-full sm:w-auto">
+                <button onClick={() => navigate("/contact")} className="px-6 py-3 bg-white/5 hover:bg-white/10 text-white border border-white/10 rounded-xl backdrop-blur-md transition-all w-full sm:w-auto">
                   Book Demo
                 </button>
               </div>
 
               {/* TRUST / STATS */}
-              <div className="flex flex-wrap gap-6 md:gap-8 pt-6 text-sm text-slate-500">
+              <div className="flex flex-wrap gap-6 md:gap-8 pt-6 text-sm text-slate-400">
                 <div>
-                  <p className="text-xl font-bold text-slate-900">50+</p>
+                  <p className="text-xl font-bold text-white">50+</p>
                   <p>Branches Managed</p>
                 </div>
 
                 <div>
-                  <p className="text-xl font-bold text-slate-900">100%</p>
+                  <p className="text-xl font-bold text-white">100%</p>
                   <p>Real-Time Sync</p>
                 </div>
 
                 <div>
-                  <p className="text-xl font-bold text-slate-900">30%</p>
+                  <p className="text-xl font-bold text-white">30%</p>
                   <p>Better Control</p>
                 </div>
               </div>
