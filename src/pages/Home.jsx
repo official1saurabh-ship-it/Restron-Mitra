@@ -111,7 +111,7 @@ const Home = () => {
 
       {/* ==================== HERO BANNER ==================== */}
       <Banner
-        image={laptop}
+        image={""}
         title={<>The Operating System for <br className="hidden sm:block" /> <span className="text-brand-400">Modern Restaurants</span></>}
         subtitle="Ab orders, billing aur reports sab ek hi jagah — bina tension ke."
         ctaText="Get Started for Free"

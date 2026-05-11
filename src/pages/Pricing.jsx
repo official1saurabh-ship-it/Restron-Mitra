@@ -114,7 +114,7 @@ const Pricing = () => {
       </div>
 
       {/* Pricing Grid */}
-      <div className="max-w-screen-2xl mx-auto px-6 sm:px-8 lg:px-12">
+      <div className="w-full h-56 sm:h-72 md:h-80 lg:h-96 bg-saas-accent/10 mx-auto px-6 sm:px-8 lg:px-12">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-10 xl:gap-14 items-stretch">
           {tiers.map((tier, index) => (
             <motion.div
